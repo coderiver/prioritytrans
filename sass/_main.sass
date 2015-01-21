@@ -5,8 +5,8 @@
 	background: url(../img/europe.png) 100% 560px no-repeat
 	+rh(900)
 		background-position: 100% 460px
-	+rh(768)
-		background-position: 100% 300px	
+	+r(1024)
+		background-position: 130px 300px	
 
 // footer
 .footer
@@ -34,6 +34,7 @@
 				+tr(color 200ms)
 				&:hover
 					color: rgba(#006596, 1) 
+.contacts
 	&__info
 		margin-bottom: 25px 
 		p
@@ -60,7 +61,7 @@
 		margin-top: 3%	
 	+rh(860)
 		margin-top: 7%
-		background-size: 35% auto
+		background-size: 40% auto
 	+rh(800)
 		margin-top: 5%
 	+rh(768)
@@ -68,7 +69,7 @@
 	.h2
 		margin-bottom: 5%
 		+rh(860)
-			margin-bottom: 3%
+			margin-bottom: 10px
 			padding-bottom: 20px 
 	&__about
 		margin-bottom: 10%
@@ -143,7 +144,9 @@
 				span
 					box-shadow: 0 0 0 #bfdae4					
 	&__down
-		text-align: center		
+		text-align: center
+		+r(1366)
+			display: none		
 
 // m-geography
 .m-geography
@@ -174,7 +177,7 @@
 			border: 8px solid #fff 	
 	&__about
 		position: relative
-		width: 450px
+		width: 190%
 		+myriad-sb
 		margin-bottom: 90px
 	&__distance
@@ -320,7 +323,10 @@
 .m-articles
 	position: relative
 	padding-left: 100px
-	padding-right: 66px 
+	padding-right: 66px
+	+r(1024)
+		padding-left: 32px 
+		padding-right: 0
 	&:before
 		content: ""
 		position: absolute
@@ -329,6 +335,8 @@
 		right: -44px
 		bottom: 0 
 		background: url(../img/img3.jpg) 100% 0 no-repeat
+		+r(1024)
+			left: 77px
 	&__list
 		position: relative
 		padding-top: 34px
@@ -344,6 +352,8 @@
 	&__more
 		padding: 40px 68px 60px 0
 		text-align: right
+		+r(1024)
+			padding: 40px 0 60px 0 
 	&__text
 		line-height: 1.7	
 		

@@ -1,7 +1,8 @@
 head.ready(function() {
 
 	$('.menu-btn').on('click', function(){
-		$(this).toggleClass('is-opened');
+		$(this).toggleClass('is-open');
+		$('.js-nav').toggleClass('is-open');
 	});
 
 

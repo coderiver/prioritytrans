@@ -31,7 +31,7 @@
 	font-family: 'FarreronsSerifLightItalic', Arial, sans-serif
 
 body
-	min-width: 1112px
+	min-width: 1024px
 	+myriad
 	font-size: 14px 
 	line-height: 1.4
@@ -47,7 +47,9 @@ body
 	z-index: 1 
 .center
 	width: 980px
-	margin: 0 auto 
+	margin: 0 auto
+	+r(1024)
+		width: 746px 
 .row
 	+clr
 .col
@@ -150,21 +152,21 @@ body
 		width: 135px
 		height: 2px
 		background: #187ea6
-	+rh(860)
-		font-size: 36px
-.h3
+.h3, .h4
 	font-size: 32px
 	+farrerons
 	text-transform: uppercase
 	color: #006596
-	font-weight: normal			  
+	font-weight: normal
+.h4
+	font-size: 30px				  
 
 // box
 .box
 	position: fixed
 	background: rgba(#fff, .9)
 	+clr
-	z-index: 2
+	z-index: 3
 	&.box_top
 		top: 0
 		left: 0
@@ -242,7 +244,7 @@ body
 	&:hover
 		span
 			background: #01719d 	
-	&.is-opened
+	&.is-open
 		span
 			opacity: 0
 		&:before
@@ -292,7 +294,48 @@ body
 			text-decoration: none 
 			&.is-active
 				opacity: 1 
-
+				
+// navigation
+.nav
+	position: fixed
+	top: 85px
+	left: 66px
+	right: 66px
+	bottom: 66px
+	background: rgba(#fff, 0.97)
+	z-index: 2
+	+transform(translateX(-105%))
+	+tr(transform 300ms)
+	+vertical
+	&.is-open
+		+transform(translateX(0))	  				
+	&__in
+		display: inline-block
+		vertical-align: middle
+.menu
+	text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		text-align: left
+		margin: 0 50px
+		.h4
+			margin-bottom: 40px
+	&__list
+		font-size: 11px
+		text-transform: uppercase
+		& > li
+			margin-bottom: 15px 
+		a
+			text-decoration: none
+			+h-l
+			+ls
+			color: rgba(#006596, .5)
+			+tr(color 200ms)
+			&:hover
+				color: rgba(#006596, 1)	
+			&.current
+				color: #8eb30a	  		
 			
 
 
