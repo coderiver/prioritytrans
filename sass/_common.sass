@@ -17,9 +17,18 @@
 +font(HelveticaNeueCyrThin, HelveticaNeueCyrThin)
 =h-t
 	font-family: 'HelveticaNeueCyrThin', Arial, sans-serif	
-+font(FarreronsSerifLight, FarreronsSerifLight)
++font(FarreronsSerifregular, FarreronsSerifregular)
 =farrerons
-	font-family: 'FarreronsSerifLight', Arial, sans-serif
+	font-family: 'FarreronsSerifregular', Arial, sans-serif
++font(FarreronsSerifItalic, FarreronsSerifItalic)
+=farrerons-i
+	font-family: 'FarreronsSerifItalic', Arial, sans-serif	
++font(FarreronsSerifThinItalic, FarreronsSerifThinItalic)
+=farrerons-ti
+	font-family: 'FarreronsSerifThinItalic', Arial, sans-serif	
++font(FarreronsSerifLightItalic, FarreronsSerifLightItalic)
+=farrerons-li
+	font-family: 'FarreronsSerifLightItalic', Arial, sans-serif
 
 body
 	min-width: 1112px
@@ -51,6 +60,17 @@ body
 	width: 75%
 	float: left				
 
+.button
+	height: 58px
+	width: 492px
+	background: #006596
+	+h-r
+	font-size: 11px
+	text-transform: uppercase
+	color: #fff
+	+tr(background 200ms)
+	&:hover
+		background: #004d73    
 .forward
 	position: relative
 	display: inline-block
@@ -68,6 +88,10 @@ body
 		+arr(7, 9, #9ebd2b, r)
 	&:hover
 		text-decoration: none
+	&.forward_blue
+		color: #006596
+		&:after
+			+arr(7, 9, #006596, r)	
 .down
 	display: inline-block
 	+s(down)

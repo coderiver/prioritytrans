@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -31,7 +32,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: HelveticaNeueCyrRoman; src: url("fonts/HelveticaNeueCyrRoman.eot"); src: url("fonts/HelveticaNeueCyrRoman.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrRoman.woff2") format("woff2"), url("fonts/HelveticaNeueCyrRoman.woff") format("woff"), url("fonts/HelveticaNeueCyrRoman.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrLight; src: url("fonts/HelveticaNeueCyrLight.eot"); src: url("fonts/HelveticaNeueCyrLight.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrLight.woff2") format("woff2"), url("fonts/HelveticaNeueCyrLight.woff") format("woff"), url("fonts/HelveticaNeueCyrLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrThin; src: url("fonts/HelveticaNeueCyrThin.eot"); src: url("fonts/HelveticaNeueCyrThin.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrThin.woff2") format("woff2"), url("fonts/HelveticaNeueCyrThin.woff") format("woff"), url("fonts/HelveticaNeueCyrThin.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: FarreronsSerifLight; src: url("fonts/FarreronsSerifLight.eot"); src: url("fonts/FarreronsSerifLight.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifLight.woff2") format("woff2"), url("fonts/FarreronsSerifLight.woff") format("woff"), url("fonts/FarreronsSerifLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FarreronsSerifregular; src: url("fonts/FarreronsSerifregular.eot"); src: url("fonts/FarreronsSerifregular.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifregular.woff2") format("woff2"), url("fonts/FarreronsSerifregular.woff") format("woff"), url("fonts/FarreronsSerifregular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FarreronsSerifItalic; src: url("fonts/FarreronsSerifItalic.eot"); src: url("fonts/FarreronsSerifItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifItalic.woff2") format("woff2"), url("fonts/FarreronsSerifItalic.woff") format("woff"), url("fonts/FarreronsSerifItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FarreronsSerifThinItalic; src: url("fonts/FarreronsSerifThinItalic.eot"); src: url("fonts/FarreronsSerifThinItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifThinItalic.woff2") format("woff2"), url("fonts/FarreronsSerifThinItalic.woff") format("woff"), url("fonts/FarreronsSerifThinItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: FarreronsSerifLightItalic; src: url("fonts/FarreronsSerifLightItalic.eot"); src: url("fonts/FarreronsSerifLightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifLightItalic.woff2") format("woff2"), url("fonts/FarreronsSerifLightItalic.woff") format("woff"), url("fonts/FarreronsSerifLightItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; font-size: 14px; line-height: 1.4; background: #eef4f6; }
 
 .container { position: relative; padding-top: 84px; z-index: 1; }
@@ -47,9 +51,14 @@ body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .col3 { width: 75%; float: left; }
 
+.button { height: 58px; width: 492px; background: #006596; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; text-transform: uppercase; color: #fff; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
+.button:hover { background: #004d73; }
+
 .forward { position: relative; display: inline-block; padding-right: 17px; color: #9ebd2b; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
 .forward:after { content: ""; position: absolute; top: 3px; right: 0; width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 7px; border-color: transparent transparent transparent #9ebd2b; }
 .forward:hover { text-decoration: none; }
+.forward.forward_blue { color: #006596; }
+.forward.forward_blue:after { width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 7px; border-color: transparent transparent transparent #006596; }
 
 .down { display: inline-block; background: url('../img/icons-s07909486cb.png') 0 -132px no-repeat; width: 17px; height: 24px; opacity: 0.5; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .down:hover { opacity: 1; }
@@ -62,11 +71,11 @@ body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .btn.btn_blue:hover { color: #fff; background: #006596; }
 .btn.btn_blue:hover .arr-l { width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 7px; border-color: transparent transparent transparent #fff; }
 
-.h2 { position: relative; padding-bottom: 30px; margin-bottom: 50px; color: #006595; font-family: "FarreronsSerifLight", Arial, sans-serif; font-size: 49px; text-transform: uppercase; font-weight: normal; }
+.h2 { position: relative; padding-bottom: 30px; margin-bottom: 50px; color: #006595; font-family: "FarreronsSerifregular", Arial, sans-serif; font-size: 49px; text-transform: uppercase; font-weight: normal; }
 .h2:after { content: ""; position: absolute; bottom: 0; left: 0; width: 135px; height: 2px; background: #187ea6; }
 @media only screen and (max-height: 860px) { .h2 { font-size: 36px; } }
 
-.h3 { font-size: 32px; font-family: "FarreronsSerifLight", Arial, sans-serif; text-transform: uppercase; color: #006596; font-weight: normal; }
+.h3 { font-size: 32px; font-family: "FarreronsSerifregular", Arial, sans-serif; text-transform: uppercase; color: #006596; font-weight: normal; }
 
 .box { position: fixed; background: rgba(255, 255, 255, 0.9); *zoom: 1; z-index: 2; }
 .box:after { content: " "; display: table; clear: both; }
@@ -185,4 +194,71 @@ body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .m-company__title:before { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 30px; background: #9ebd2b; }
 .m-company__more { padding-left: 50px; height: 222px; text-align: center; font-size: 0; }
 .m-company__more:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.m-company__more a { display: inline-block; vertical-align: middle; font-size: 28px; font-family: "FarreronsSerifLight", Arial, sans-serif; font-style: italic; text-decoration: none; color: #006596; text-align: left; }
+.m-company__more a { display: inline-block; vertical-align: middle; font-size: 28px; font-family: "FarreronsSerifItalic", Arial, sans-serif; line-height: 1; font-style: italic; color: #006596; text-align: left; }
+.m-company__more a:hover { text-decoration: none; }
+
+.m-media { position: relative; }
+
+.m-news { position: relative; }
+.m-news__date { position: relative; height: 294px; margin-top: 97px; }
+.m-news__date-img { position: absolute; top: 0; bottom: 0; right: 0; left: 0; font-size: 0; }
+.m-news__date-img img { width: 100%; height: 100%; }
+.m-news__date-img:before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 101, 150, 0.9); z-index: 1; }
+.m-news__date-number { position: absolute; top: 0; bottom: 0; right: 0; left: 0; font-size: 24px; color: #fff; text-align: center; z-index: 2; }
+.m-news__date-number span { font-size: 120px; font-family: "FarreronsSerifThinItalic", Arial, sans-serif; }
+.m-news__date-number p { font-family: "FarreronsSerifLightItalic", Arial, sans-serif; }
+.m-news__article { position: relative; height: 294px; padding: 50px 0 0 36px; background: #fff; }
+.m-news__title { margin-bottom: 20px; font-size: 18px; color: #116f9d; font-family: "MyriadProSemibold", Arial, sans-serif; }
+.m-news__title > p { line-height: 1.6; }
+.m-news .h3 { position: absolute; top: 45px; left: 25px; }
+.m-news .forward { position: absolute; bottom: 40px; left: 280px; }
+
+.m-articles { position: relative; padding-left: 100px; padding-right: 66px; }
+.m-articles:before { content: ""; position: absolute; top: 55px; left: 100px; right: -44px; bottom: 0; background: url(../img/img3.jpg) 100% 0 no-repeat; }
+.m-articles__list { position: relative; padding-top: 34px; }
+.m-articles__list > li { margin-bottom: 30px; }
+.m-articles__date { margin-bottom: 15px; color: rgba(0, 0, 0, 0.5); font-size: 10px; text-transform: uppercase; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; letter-spacing: 1px; }
+.m-articles__more { padding: 40px 68px 60px 0; text-align: right; }
+.m-articles__text { line-height: 1.7; }
+
+.m-form { position: absolute; bottom: 42px; left: 0; right: 0; text-align: center; }
+
+.slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
+
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list:focus { outline: none; }
+.slick-loading .slick-list { background: white slick-image-url("ajax-loader.gif") center center no-repeat; }
+.slick-list.dragging { cursor: pointer; cursor: hand; }
+
+.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.slick-track { position: relative; left: 0; top: 0; display: block; zoom: 1; }
+.slick-track:before, .slick-track:after { content: ""; display: table; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+
+.slick-slide { float: left; height: 100%; min-height: 1px; display: none; }
+.slick-slide img { display: block; max-width: 100%; }
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+
+.slick-prev, .slick-next { position: absolute; top: 50%; margin-top: -14px; font: 0/0 a; text-shadow: none; color: transparent; height: 50px; background: none; }
+.slick-prev:focus, .slick-next:focus { outline: none; }
+.slick-prev.slick-disabled, .slick-next.slick-disabled { opacity: 0.2; }
+.slick-prev:before, .slick-next:before { height: 50px; line-height: 50px; }
+
+.slick-prev { left: 0; }
+.slick-prev:before { content: "←"; display: inline-block; vertical-align: middle; font-size: 61px; color: #fff; }
+
+.slick-next { right: 0; }
+.slick-next:before { content: "→"; display: inline-block; vertical-align: middle; font-size: 61px; color: #fff; }
+
+.slick-dots { text-align: center; position: absolute; margin: 0; bottom: 30px; left: 122px; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+.slick-dots li { position: relative; display: inline-block; padding: 0 7px; }
+.slick-dots li.slick-active button { opacity: 1; }
+.slick-dots li:before { display: none; }
+.slick-dots button { display: block; width: 6px; height: 6px; background: #fff; cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; opacity: 0.5; }
+.slick-dots button:hover { opacity: 1; }
