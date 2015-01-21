@@ -1,8 +1,12 @@
 // Normally mainpage styles
 
-// container bg
+// container index
 .container_index
 	background: url(../img/europe.png) 100% 560px no-repeat
+	+rh(900)
+		background-position: 100% 460px
+	+rh(768)
+		background-position: 100% 300px	
 
 // footer
 .footer
@@ -147,6 +151,18 @@
 		width: 380px
 		p
 			margin-bottom: 10px
+	&__next
+		padding: 94px 0 236px
+		text-align: right
+		
+// m-company
+.m-company
+	margin-bottom: 80px
+	&__main
+		position: relative
+	&__about
+		position: relative
+		width: 450px 			
 
 
 
