@@ -20,10 +20,17 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 @font-face { font-family: MyriadProRegular; src: url("fonts/MyriadProRegular.eot"); src: url("fonts/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("fonts/MyriadProRegular.woff2") format("woff2"), url("fonts/MyriadProRegular.woff") format("woff"), url("fonts/MyriadProRegular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: MyriadProSemibold; src: url("fonts/MyriadProSemibold.eot"); src: url("fonts/MyriadProSemibold.eot?#iefix") format("embedded-opentype"), url("fonts/MyriadProSemibold.woff2") format("woff2"), url("fonts/MyriadProSemibold.woff") format("woff"), url("fonts/MyriadProSemibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrBold; src: url("fonts/HelveticaNeueCyrBold.eot"); src: url("fonts/HelveticaNeueCyrBold.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrBold.woff2") format("woff2"), url("fonts/HelveticaNeueCyrBold.woff") format("woff"), url("fonts/HelveticaNeueCyrBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrRoman; src: url("fonts/HelveticaNeueCyrRoman.eot"); src: url("fonts/HelveticaNeueCyrRoman.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrRoman.woff2") format("woff2"), url("fonts/HelveticaNeueCyrRoman.woff") format("woff"), url("fonts/HelveticaNeueCyrRoman.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: HelveticaNeueCyrLight; src: url("fonts/HelveticaNeueCyrLight.eot"); src: url("fonts/HelveticaNeueCyrLight.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrLight.woff2") format("woff2"), url("fonts/HelveticaNeueCyrLight.woff") format("woff"), url("fonts/HelveticaNeueCyrLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: HelveticaNeueCyrThin; src: url("fonts/HelveticaNeueCyrThin.eot"); src: url("fonts/HelveticaNeueCyrThin.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueCyrThin.woff2") format("woff2"), url("fonts/HelveticaNeueCyrThin.woff") format("woff"), url("fonts/HelveticaNeueCyrThin.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: FarreronsSerifLight; src: url("fonts/FarreronsSerifLight.eot"); src: url("fonts/FarreronsSerifLight.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifLight.woff2") format("woff2"), url("fonts/FarreronsSerifLight.woff") format("woff"), url("fonts/FarreronsSerifLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; font-size: 14px; line-height: 1.4; background: #eef4f6; }
 
@@ -51,7 +58,7 @@ body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .btn { display: inline-block; background: transparent; border: 2px solid #9ebd2b; height: 42px; line-height: 42px; padding: 0 28px; text-decoration: none; color: #9ebd2b; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; -moz-transition: color 200ms, background 200ms; -o-transition: color 200ms, background 200ms; -webkit-transition: color 200ms, background 200ms; transition: color 200ms, background 200ms; }
 .btn:hover { background: #9ebd2b; color: #fff; }
-.btn.btn_blue { border-color: #006596; color: #006596; }
+.btn.btn_blue { padding: 0 46px; border-color: #006596; color: #006596; }
 .btn.btn_blue:hover { color: #fff; background: #006596; }
 .btn.btn_blue:hover .arr-l { width: 0px; height: 0px; border-style: solid; border-width: 4.5px 0 4.5px 7px; border-color: transparent transparent transparent #fff; }
 
@@ -159,5 +166,23 @@ body { min-width: 1112px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .m-geography__next { padding: 94px 0 236px; text-align: right; }
 
 .m-company { margin-bottom: 80px; }
-.m-company__main { position: relative; }
-.m-company__about { position: relative; width: 450px; }
+.m-company__main { position: relative; padding-top: 55px; padding-bottom: 55px; }
+.m-company__main .h3 { margin-bottom: 20px; }
+.m-company__main:before { content: ""; position: absolute; top: 0; left: -48px; bottom: 0; width: 338px; border: 8px solid #fff; }
+.m-company__about { position: relative; width: 450px; font-family: "MyriadProSemibold", Arial, sans-serif; margin-bottom: 90px; }
+.m-company__distance { margin-bottom: 90px; color: #3181a9; opacity: 0.5; }
+.m-company__distance span { font-size: 14px; font-style: italic; }
+.m-company__distance p { font-size: 36px; font-family: "HelveticaNeueCyrThin", Arial, sans-serif; }
+.m-company__col { position: relative; display: block; text-decoration: none; color: #000; padding: 30px 0 0 36px; }
+.m-company__col:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 222px; background: #FFF; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
+.m-company__col:hover:before { background: #e2eeb6; }
+.m-company__col:hover .m-company__number { color: #9ebd2b; }
+.m-company__col:hover .m-company__title { color: #000; }
+.m-company__col.first { margin-top: 222px; }
+.m-company__col > p { position: relative; line-height: 1.6; }
+.m-company__number { position: relative; margin-bottom: 35px; font-size: 14px; color: rgba(17, 111, 157, 0.5); -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.m-company__title { position: relative; margin-bottom: 20px; font-family: "MyriadProSemibold", Arial, sans-serif; font-size: 18px; color: #116f9d; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; padding-bottom: 20px; }
+.m-company__title:before { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 30px; background: #9ebd2b; }
+.m-company__more { padding-left: 50px; height: 222px; text-align: center; font-size: 0; }
+.m-company__more:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.m-company__more a { display: inline-block; vertical-align: middle; font-size: 28px; font-family: "FarreronsSerifLight", Arial, sans-serif; font-style: italic; text-decoration: none; color: #006596; text-align: left; }

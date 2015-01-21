@@ -160,9 +160,96 @@
 	margin-bottom: 80px
 	&__main
 		position: relative
+		padding-top: 55px
+		padding-bottom: 55px
+		.h3
+			margin-bottom: 20px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: -48px
+			bottom: 0
+			width: 338px
+			border: 8px solid #fff 	
 	&__about
 		position: relative
-		width: 450px 			
+		width: 450px
+		+myriad-sb
+		margin-bottom: 90px
+	&__distance
+		margin-bottom: 90px
+		color: #3181a9
+		opacity: 0.5
+		span
+			font-size: 14px
+			font-style: italic
+		p
+			font-size: 36px
+			+h-t
+	&__col
+		position: relative
+		display: block
+		text-decoration: none
+		color: #000
+		padding: 30px 0 0 36px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			height: 222px
+			background: #FFF
+			+tr(background 200ms)
+		&:hover
+			&:before
+				background: #e2eeb6
+			.m-company__number
+				color: #9ebd2b
+			.m-company__title
+				color: #000		 	
+		&.first
+			margin-top: 222px	 
+		& > p
+			position: relative
+			line-height: 1.6 
+	&__number
+		position: relative
+		margin-bottom: 35px
+		font-size: 14px
+		color: rgba(#116f9d, 0.5)
+		+tr(color 200ms)
+	&__title
+		position: relative
+		margin-bottom: 20px
+		+myriad-sb
+		font-size: 18px
+		color: #116f9d
+		+tr(color 200ms)
+		padding-bottom: 20px
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 2px
+			width: 30px 
+			background: #9ebd2b
+	&__more
+		padding-left: 50px
+		height: 222px 
+		+vertical
+		a
+			display: inline-block
+			vertical-align: middle
+			font-size: 28px
+			+farrerons
+			font-style: italic
+			text-decoration: none
+			color: #006596
+			text-align: left 		 
+  			
 
 
 
