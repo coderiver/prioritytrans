@@ -243,7 +243,40 @@
 					</div>
 				</div>
 				<div class="m-form">
-					<button class="button">оставить заявку</button>
+					<div class="m-form__in js-form">
+						<div class="m-form__front">
+							<button class="button js-form-btn">оставить заявку</button>
+						</div>
+						<div class="m-form__back js-form-back">
+							<div class="m-form__step1 js-step1">
+								<h3 class="h3">оставить заявку</h3>
+								<div class="form">
+									<form class="js-validate">
+										<div class="form__row">
+											<input type="text" class="input" placeholder="Имя" name="name" data-validation="required"> 
+										</div>
+										<div class="form__row">
+											<input type="text" class="input" placeholder="Компания" name="company" data-validation="required"> 
+										</div>
+										<div class="form__row">
+											<input type="text" class="input" placeholder="e-mail" name="email" data-validation="email"> 
+										</div>
+										<div class="form__row">
+											<textarea class="textarea" placeholder="Сообщение" data-validation="required"></textarea> 
+										</div>
+										<div class="form__row">
+											<button type="submit" class="button button_white">отправить</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="m-form__step2 js-step2 is-hidden">
+								<h3 class="h3">спасибо!</h3>
+								<p>Ваша заявка успешно отправлена.<br> в ближайшее время с вами<br> свяжется наш менеджер</p>
+								<button class="return js-form-return"></button>
+							</div>	
+						</div>
+					</div>
 				</div>	
 			</div>
 		</section>

@@ -40,7 +40,8 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .container { position: relative; padding-top: 84px; z-index: 1; }
 
-.center { width: 980px; margin: 0 auto; }
+.center { max-width: 980px; margin: 0 auto; }
+@media only screen and (max-width: 1112px) { .center { max-width: 860px; } }
 @media only screen and (max-width: 1024px) { .center { width: 746px; } }
 
 .row { *zoom: 1; }
@@ -132,6 +133,10 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .menu__list a:hover { color: #006596; }
 .menu__list a.current { color: #8eb30a; }
 
+.inner-nav li { margin-bottom: 28px; }
+.inner-nav li a { font-size: 11px; text-transform: uppercase; text-decoration: none; padding-bottom: 2px; box-shadow: 0 1px 0 rgba(0, 101, 149, 0.5); letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; color: rgba(0, 101, 149, 0.5); -moz-transition: color 200ms, box-shadow 200ms; -o-transition: color 200ms, box-shadow 200ms; -webkit-transition: color 200ms, box-shadow 200ms; transition: color 200ms, box-shadow 200ms; }
+.inner-nav li a:hover { color: #006595; box-shadow: 0 1px 0 transparent; }
+
 .form { position: relative; }
 .form__row { margin-bottom: 15px; }
 
@@ -151,6 +156,34 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .input.error::placeholder, .textarea.error::placeholder { color: #ff6767; }
 
 .textarea { height: 70px; padding: 5px 12px; resize: none; }
+
+.breadcrumbs { padding: 50px 0 30px; }
+.breadcrumbs ul { *zoom: 1; }
+.breadcrumbs ul:after { content: " "; display: table; clear: both; }
+.breadcrumbs ul li { float: left; margin-right: 30px; }
+.breadcrumbs ul li a { font-size: 13px; color: rgba(0, 0, 0, 0.3); text-decoration: none; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.breadcrumbs ul li a:hover { color: rgba(0, 0, 0, 0.5); }
+
+.article__title { margin-bottom: 20px; font-family: "MyriadProSemibold", Arial, sans-serif; font-size: 18px; }
+.article__in { *zoom: 1; }
+.article__in:after { content: " "; display: table; clear: both; }
+.article__left { float: left; width: 55%; }
+.article__right { float: right; width: 33%; }
+.article p { margin-bottom: 20px; }
+
+.block { position: relative; display: block; height: 444px; text-decoration: none; color: #000; padding: 30px 0 0 36px; }
+.block:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 222px; background: #FFF; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
+.block p { position: relative; line-height: 1.6; }
+.block__number { position: relative; margin-bottom: 35px; font-size: 14px; color: rgba(17, 111, 157, 0.5); -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.block__title { position: relative; margin-bottom: 20px; font-family: "MyriadProSemibold", Arial, sans-serif; font-size: 18px; color: #116f9d; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; padding-bottom: 20px; }
+.block__title:before { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 30px; background: #9ebd2b; }
+
+.block[href] { text-decoration: none; }
+.block[href] .block__number { color: rgba(17, 111, 157, 0.5); }
+.block[href] .block__title { color: #116f9d; }
+.block[href]:hover:before { background: #e2eeb6; }
+.block[href]:hover .m-company__number { color: #9ebd2b; }
+.block[href]:hover .m-company__title { color: #000; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
@@ -323,3 +356,14 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .slick-dots li:before { display: none; }
 .slick-dots button { display: block; width: 6px; height: 6px; background: #fff; cursor: pointer; font: 0/0 a; text-shadow: none; color: transparent; border-radius: 50%; opacity: 0.5; }
 .slick-dots button:hover { opacity: 1; }
+
+.stats { padding: 75px 0 50px; }
+.stats__title { margin-bottom: 10px; color: #83ac00; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; }
+.stats__title span { font-size: 30px; line-height: 1; }
+.stats__title p { font-size: 16px; }
+.stats__text { font-style: italic; padding-right: 10px; }
+
+.benefits__title { height: 444px; padding-top: 130px; }
+.benefits__title .h3 { position: relative; width: 320px; }
+.benefits__bot { padding-top: 222px; }
+.benefits__bot .block:before { background: #e0eef3; }

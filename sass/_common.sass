@@ -46,8 +46,10 @@ body
 	padding-top: 84px
 	z-index: 1 
 .center
-	width: 980px
+	max-width: 980px
 	margin: 0 auto
+	+r(1112)
+		max-width: 860px 
 	+r(1024)
 		width: 746px 
 .row
@@ -343,7 +345,24 @@ body
 				color: rgba(#006596, 1)	
 			&.current
 				color: #8eb30a
-				
+.inner-nav
+	li
+		margin-bottom: 28px
+		a
+			font-size: 11px 
+			text-transform: uppercase
+			text-decoration: none
+			padding-bottom: 2px
+			box-shadow: 0 1px 0 rgba(#006595, .5)
+			+ls
+			+h-l
+			color: rgba(#006595, .5)
+			+transition(color 200ms, box-shadow 200ms)
+			&:hover
+				color: #006595
+				box-shadow: 0 1px 0 transparent
+		
+
 // form
 .form
 	position: relative
@@ -371,7 +390,96 @@ body
 .textarea
 	height: 70px
 	padding: 5px 12px 
-	resize: none 			
+	resize: none
+	
+// breadcrumbs
+.breadcrumbs
+	padding: 50px 0 30px
+	ul
+		+clr
+		li
+			float: left
+			margin-right: 30px
+			a
+				font-size: 13px
+				color: rgba(#000, 0.3)
+				text-decoration: none
+				+tr(color 200ms)
+				&:hover
+					color: rgba(#000, 0.5)
+					
+// article
+.article
+	&__title
+		margin-bottom: 20px
+		+myriad-sb
+		font-size: 18px
+	&__in
+		+clr
+	&__left
+		float: left
+		width: 55%
+	&__right
+		float: right
+		width: 33%		
+	p
+		margin-bottom: 20px 
+		
+// block
+.block
+	position: relative
+	display: block
+	height: 444px
+	text-decoration: none
+	color: #000
+	padding: 30px 0 0 36px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 222px
+		background: #FFF
+		+tr(background 200ms)		 		 
+	p
+		position: relative
+		line-height: 1.6
+	&__number
+		position: relative
+		margin-bottom: 35px
+		font-size: 14px
+		color: rgba(#116f9d, 0.5)
+		+tr(color 200ms)	
+	&__title
+		position: relative
+		margin-bottom: 20px
+		+myriad-sb
+		font-size: 18px
+		color: #116f9d
+		+tr(color 200ms)
+		padding-bottom: 20px
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 2px
+			width: 30px 
+			background: #9ebd2b
+.block[href]
+	text-decoration: none
+	.block__number
+		color: rgba(#116f9d, 0.5)
+	.block__title
+		color: #116f9d
+	&:hover
+		&:before
+			background: #e2eeb6
+		.m-company__number
+			color: #9ebd2b
+		.m-company__title
+			color: #000							 					
 
 
 
