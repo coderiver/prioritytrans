@@ -64,15 +64,22 @@ body
 
 .button
 	height: 58px
-	width: 492px
+	width: 100%
 	background: #006596
 	+h-r
 	font-size: 11px
 	text-transform: uppercase
 	color: #fff
-	+tr(background 200ms)
+	+tr(all 200ms)
 	&:hover
-		background: #004d73    
+		background: #004d73
+	&.button_white
+		color: #006596
+		background: #fff
+		border: 2px solid #fff
+		&:hover
+			background: transparent
+			color: #fff 	    
 .forward
 	position: relative
 	display: inline-block
@@ -335,8 +342,36 @@ body
 			&:hover
 				color: rgba(#006596, 1)	
 			&.current
-				color: #8eb30a	  		
-			
+				color: #8eb30a
+				
+// form
+.form
+	position: relative
+	&__row
+		margin-bottom: 15px
+.help-block
+	display: none		 
+.input, .textarea
+	height: 42px
+	width: 100%
+	padding: 0 12px
+	background: transparent  
+	border: 2px solid #fff
+	+h-l
+	color: #fff
+	text-transform: uppercase
+	+placeholder
+		text-transform: uppercase
+		color: rgba(#fff, 0.5)
+	&.error
+		border-color: #ff6767
+		color: rgba(#ff6767, 0.5)
+		+placeholder
+			color: #ff6767						  		
+.textarea
+	height: 70px
+	padding: 5px 12px 
+	resize: none 			
 
 
 
