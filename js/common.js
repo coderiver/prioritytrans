@@ -54,5 +54,32 @@ head.ready(function() {
       	$('.js-step1').removeClass('is-hidden');
       	$('.js-step2').addClass('is-hidden');
 	});
+
+	// clouds parallax effect
 	
+	function cloudsParallax(){
+
+		$('.js-cloud').each(function(){
+			var cloud = $(this),
+				yPos = -($(window).scrollTop() / cloud.data('speed'));
+				
+			if (cloud.data('dir') == 'left') {
+				cloud.css('left', yPos);
+			}
+			else if(cloud.data('dir') == 'right') {
+				cloud.css('right', yPos);
+			}
+
+		});
+		
+
+	};
+	cloudsParallax();
+
+	// window scroll function
+
+	$(window).scroll(function(){
+		cloudsParallax();
+	});
+
 });

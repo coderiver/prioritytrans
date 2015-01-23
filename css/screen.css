@@ -244,7 +244,7 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .topper__down { text-align: center; }
 @media only screen and (max-width: 1366px) { .topper__down { display: none; } }
 
-.m-geography { position: relative; }
+.m-geography { position: relative; overflow: hidden; }
 .m-geography .cloud1 { position: absolute; right: 0; top: 0; }
 .m-geography .cloud2 { position: absolute; left: 0; bottom: -50px; }
 .m-geography__text { width: 380px; }
