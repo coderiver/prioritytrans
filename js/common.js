@@ -14,6 +14,12 @@ head.ready(function() {
 		arrows: false,
 		slidesToShow: 1
 	});
+	$('.js-slick-crls').slick({
+		infinite: true,
+		dots: true,
+		arrows: false,
+		slidesToShow: 1
+	});
 
 	// validation
 
