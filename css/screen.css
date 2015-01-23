@@ -360,6 +360,8 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .comm .slick-dots { left: 50%; bottom: -70px; }
 .comm .slick-dots button { background: #006596; }
 
+.container_about { background: url(../img/img4.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-attachment: fixed; }
+
 .stats { padding: 75px 0 50px; }
 .stats__title { margin-bottom: 10px; color: #83ac00; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; }
 .stats__title span { font-size: 30px; line-height: 1; }
