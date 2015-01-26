@@ -450,3 +450,19 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .tracking__text { line-height: 1.6; margin-bottom: 25px; }
 .tracking__phone { color: #006596; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; text-decoration: none; font-size: 16px; }
 .tracking__phone:hover { color: rgba(0, 101, 150, 0.7); }
+
+.container_catalog { background: url(../img/img10.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-attachment: fixed; }
+
+.catalog-list { padding-top: 90px; font-size: 0; }
+.catalog-list__item { display: inline-block; vertical-align: top; width: 50%; margin-bottom: 60px; font-size: 14px; }
+.catalog-list__item:nth-child(2n) { padding-top: 40px; }
+
+.card { position: relative; display: block; text-decoration: none; width: 85%; }
+.card:hover .card__img:after { background: #e2eeb6; }
+.card:hover .card__title { color: #000; }
+.card__price { position: absolute; top: 14px; left: -14px; padding: 5px 15px; font-size: 24px; color: #fff; background: rgba(127, 169, 0, 0.9); z-index: 3; }
+.card__img { position: relative; width: 90%; margin-bottom: 15px; font-size: 0; }
+.card__img:after { content: ""; position: absolute; top: 28px; left: 38px; width: 100%; height: 135%; background: #fff; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; z-index: 1; }
+.card__img img { position: relative; width: 100%; z-index: 2; }
+.card__content { position: relative; padding-left: 70px; color: #000; z-index: 2; }
+.card__title { margin-bottom: 20px; font-family: "FarreronsSerifregular", Arial, sans-serif; font-size: 24px; color: #01719d; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }

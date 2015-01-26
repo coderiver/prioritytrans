@@ -1,0 +1,68 @@
+// styles for catalog page
+.container_catalog
+    background: url(../img/img10.jpg)
+    +cover
+    background-attachment: fixed 
+.catalog-list
+    padding-top: 90px
+    font-size: 0
+    &__item
+        display: inline-block
+        vertical-align: top
+        width: 50%
+        margin-bottom: 60px
+        font-size: 14px
+        &:nth-child(2n)
+            padding-top: 40px
+.card
+    position: relative
+    display: block
+    text-decoration: none
+    width: 85%
+    &:hover
+        .card__img
+            &:after
+                background: #e2eeb6
+        .card__title
+            color: #000
+    &__price
+        position: absolute
+        top: 14px
+        left: -14px
+        padding: 5px 15px 
+        font-size: 24px
+        color: #fff
+        background: rgba(#7fa900, .9)
+        z-index: 3
+    &__img
+        position: relative 
+        width: 90%
+        margin-bottom: 15px
+        font-size: 0
+        &:after
+            content: ""
+            position: absolute
+            top: 28px
+            left: 38px 
+            width: 100%
+            height: 135%
+            background: #fff
+            +tr(background 200ms) 
+            z-index: 1
+        img
+            position: relative
+            width: 100%
+            z-index: 2
+    &__content
+        position: relative
+        padding-left: 70px
+        color: #000 
+        z-index: 2
+    &__title
+        margin-bottom: 20px
+        +farrerons
+        font-size: 24px
+        color: #01719d
+        +tr(color 200ms)             
+             
+         
