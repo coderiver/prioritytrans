@@ -5,7 +5,7 @@ head.ready(function() {
 		$('.js-nav').toggleClass('is-open');
 	});
 
-	// slick news on main page
+	// slick
 
 	$('.js-slick').slick({
 		infinite: true,
@@ -14,12 +14,39 @@ head.ready(function() {
 		arrows: false,
 		slidesToShow: 1
 	});
+
 	$('.js-slick-crls').slick({
 		infinite: true,
 		dots: true,
 		arrows: false,
 		slidesToShow: 1
 	});
+
+	var total = $('.driver').length;
+	
+	$('.js-drivers').slick({
+		infinite: true,
+		arrows: false,
+		slidesToShow: 1,
+		onInit: function(){
+			$('.drivers__total').text(total);
+		},
+		onAfterChange: function(){
+			var index = $('.js-drivers').slickCurrentSlide();
+			index++;
+			$('.drivers__current').text(index);
+		}
+	});
+
+	$('.drivers__prev').on('click', function(){
+		$('.js-drivers').slickPrev();
+		return false;
+	});
+	$('.drivers__next').on('click', function(){
+		$('.js-drivers').slickNext();
+		return false;
+	});
+
 
 	// validation
 
@@ -75,11 +102,21 @@ head.ready(function() {
 
 	};
 	cloudsParallax();
+	
+	// transport bg animation
+
+	$(window).scroll(function(){
+		var opacity = ($(window).scrollTop() / $('.transport').height());
+		var opacity2 = (1 - opacity);
+		$('.js-bg1').css('opacity', opacity2);
+		$('.js-bg2').css('opacity', opacity);
+	});
 
 	// window scroll function
 
 	$(window).scroll(function(){
 		cloudsParallax();
 	});
+	
 
 });
