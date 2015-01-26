@@ -63,6 +63,79 @@
         +farrerons
         font-size: 24px
         color: #01719d
-        +tr(color 200ms)             
+        +tr(color 200ms)
+
+// catalog-item
+.gallery
+    width: 80%
+    margin-bottom: 40px
+    &__view, &__nav
+        .slick-slide
+            padding: 5px 
+        img
+            width: 100%
+    &__view
+        position: relative
+        margin-bottom: 25px
+        &:before
+            content: ""
+            position: absolute
+            top: 15px
+            left: 15px
+            right: -5px
+            bottom: -5px
+            background: #FFF
+    &__nav
+        .slick-slide
+            opacity: 0.5
+            +tr(opacity 200ms)
+            cursor: pointer
+            &:hover
+                opacity: 1 
+        .slick-prev
+            left: -18px
+            +s(prev-big)
+            opacity: 0.7
+            +tr(opacity 200ms)
+            &:before
+                display: none
+            &:hover
+                opacity: 1    
+        .slick-next
+            right: -18px
+            +s(next-big)
+            opacity: 0.7
+            +tr(opacity 200ms)
+            &:before
+                display: none
+            &:hover
+                opacity: 1
+.catalog-item
+    &__back
+        margin-bottom: 60px
+    &__content
+        line-height: 1.6
+    &__about
+        margin-bottom: 30px     
+        a
+            color: #006596
+            &:hover
+                text-decoration: none
+    &__price
+        margin-bottom: 35px
+        color: #7fa900
+        font-size: 24px
+    &__table
+        padding-top: 60px    
+    .button
+        height: 50px
+.table
+    padding-top: 60px
+    &__title
+        font-size: 24px
+        +farrerons
+        
+                                    
+
              
          

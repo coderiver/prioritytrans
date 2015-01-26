@@ -47,6 +47,22 @@ head.ready(function() {
 		return false;
 	});
 
+	// gallery
+
+	$('.js-gallery-for').slick({
+		slidesToShow: 1,
+    	slidesToScroll: 1,
+    	arrows: false,
+    	fade: true,
+    	asNavFor: '.js-gallery-nav'
+	});
+	$('.js-gallery-nav').slick({
+		slidesToShow: 4,
+    	slidesToScroll: 1,
+    	asNavFor: '.js-gallery-for',
+    	focusOnSelect: true
+	});
+
 
 	// validation
 

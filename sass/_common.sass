@@ -84,7 +84,7 @@ body
 		border: 2px solid #fff
 		&:hover
 			background: transparent
-			color: #fff 	    
+			color: #fff		 	    
 .forward
 	position: relative
 	display: inline-block
@@ -105,7 +105,23 @@ body
 	&.forward_blue
 		color: #006596
 		&:after
-			+arr(7, 9, #006596, r)	
+			+arr(7, 9, #006596, r)
+.back
+	position: relative
+	display: inline-block
+	padding-left: 17px
+	text-decoration: none
+	color: #9ebd2b
+	+h-r
+	text-transform: uppercase
+	font-size: 11px
+	+ls
+	&:after
+		content: ""
+		position: absolute
+		top: 3px
+		left: 0
+		+arr(7, 9, #9ebd2b, l)				
 .down
 	display: inline-block
 	+s(down)
