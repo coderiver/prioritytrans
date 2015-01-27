@@ -1,0 +1,55 @@
+// styles for news pages
+.news
+    position: relative
+    &__nav
+        position: absolute
+        top: -65px
+        left: 50%
+        +clr
+        li
+            float: left
+            margin-right: 25px
+            a
+                text-decoration: none
+                color: rgba(#9ebd2b, 0.5)
+                +tr(color 200ms)
+                +h-l
+                font-size: 14px
+                &:hover
+                    color: #9ebd2b
+                &.is-active
+                    color: #9ebd2b   
+    &__in
+        margin-left: -8%
+        font-size: 0
+    &__block
+        display: inline-block
+        vertical-align: top
+        width: 25%
+        margin-left: 8%
+        margin-bottom: 60px
+        font-size: 14px
+        &:nth-child(6n+1), &:nth-child(6n+2), &:nth-child(6n+3)
+            .news__item
+                left: -42px
+    &__item
+        position: relative
+        display: block
+        text-decoration: none
+        &:hover
+            .news__text
+                background: #e2eeb6
+                color: #000         
+        .date
+            margin-bottom: 15px
+    &__img
+        font-size: 0
+        img
+            width: 100%
+            height: auto
+    &__text
+        padding: 20px 20px 40px
+        background: #fff
+        +transition(background 200ms, color 200ms)
+        color: #006596
+                               

@@ -54,6 +54,8 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .col3 { width: 75%; float: left; }
 
+.date { font-family: "HelveticaNeueCyrLight", Arial, sans-serif; font-size: 10px; text-transform: uppercase; color: rgba(0, 0, 0, 0.5); letter-spacing: 1px; }
+
 .button { height: 58px; width: 100%; background: #006596; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; text-transform: uppercase; color: #fff; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
 .button:hover { background: #004d73; }
 .button.button_white { color: #006596; background: #fff; border: 2px solid #fff; }
@@ -512,3 +514,20 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .popup__step1.is-hidden { display: none; }
 .popup__step2.is-hidden { display: none; }
 .popup__step2 > p { margin-bottom: 15px; font-size: 12px; line-height: 2.4; letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; }
+
+.news { position: relative; }
+.news__nav { position: absolute; top: -65px; left: 50%; *zoom: 1; }
+.news__nav:after { content: " "; display: table; clear: both; }
+.news__nav li { float: left; margin-right: 25px; }
+.news__nav li a { text-decoration: none; color: rgba(158, 189, 43, 0.5); -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; font-size: 14px; }
+.news__nav li a:hover { color: #9ebd2b; }
+.news__nav li a.is-active { color: #9ebd2b; }
+.news__in { margin-left: -8%; font-size: 0; }
+.news__block { display: inline-block; vertical-align: top; width: 25%; margin-left: 8%; margin-bottom: 60px; font-size: 14px; }
+.news__block:nth-child(6n+1) .news__item, .news__block:nth-child(6n+2) .news__item, .news__block:nth-child(6n+3) .news__item { left: -42px; }
+.news__item { position: relative; display: block; text-decoration: none; }
+.news__item:hover .news__text { background: #e2eeb6; color: #000; }
+.news__item .date { margin-bottom: 15px; }
+.news__img { font-size: 0; }
+.news__img img { width: 100%; height: auto; }
+.news__text { padding: 20px 20px 40px; background: #fff; -moz-transition: background 200ms, color 200ms; -o-transition: background 200ms, color 200ms; -webkit-transition: background 200ms, color 200ms; transition: background 200ms, color 200ms; color: #006596; }
