@@ -146,11 +146,61 @@
 						<div class="catalog-item__price">$14 500</div>
 						<div class="row">
 							<div class="col2">
-								<button class="button">оставить заявку</button>
+								<button class="button js-popup-btn">оставить заявку</button>
 							</div>
 						</div>
 						<div class="table">
 							<div class="table__title">Технические характеристики</div>
+							<ul class="table__body">
+								<li class="table__row">
+									<div class="table__col">Шасси</div>
+									<div class="table__col">Усиленная рама Н-класса <br>с лонжероном 9,5 мм</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Межосевое расстояние</div>
+									<div class="table__col">3 700 мм</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Макс. нагрузка на переднюю ось</div>
+									<div class="table__col">7 500 мм</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Макс. нагрузка на заднюю ось</div>
+									<div class="table__col">11 500 кг</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Подвеска передня</div>
+									<div class="table__col">параболические рессоры</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Подвеска задняя</div>
+									<div class="table__col">пневматическая, двухбаллонная</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Шины</div>
+									<div class="table__col">передние/задние – 315/70R22.5</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Шины</div>
+									<div class="table__col">передние/задние – 315/70R22.5</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Подвеска передня</div>
+									<div class="table__col">параболические рессоры</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Подвеска задняя</div>
+									<div class="table__col">пневматическая, двухбаллонная</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Шины</div>
+									<div class="table__col">передние/задние – 315/70R22.5</div>
+								</li>
+								<li class="table__row">
+									<div class="table__col">Шины</div>
+									<div class="table__col">передние/задние – 315/70R22.5</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -196,7 +246,40 @@
 		<!-- END footer -->
 	</div>
 	<!-- END content -->
-
+	
+	<!-- BEGIN popup -->
+	<div class="popup js-popup-form is-open">
+		<div class="popup__in">
+			<button class="popup__close js-popup-close"></button>
+			<div class="popup__step1 js-step1">
+				<h3 class="h3">оставить заявку</h3>
+				<div class="form">
+					<form class="js-validate">
+						<div class="form__row">
+							<input type="text" class="input" placeholder="Имя" name="name" data-validation="required"> 
+						</div>
+						<div class="form__row">
+							<input type="text" class="input" placeholder="Компания" name="company" data-validation="required"> 
+						</div>
+						<div class="form__row">
+							<input type="text" class="input" placeholder="e-mail" name="email" data-validation="email"> 
+						</div>
+						<div class="form__row">
+							<textarea class="textarea" placeholder="Сообщение" data-validation="required"></textarea> 
+						</div>
+						<div class="form__row">
+							<button type="submit" class="button button_white button_small">отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="popup__step2 js-step2 is-hidden">
+				<h3 class="h3">спасибо!</h3>
+				<p>Ваша заявка успешно отправлена.<br> в ближайшее время с вами<br> свяжется наш менеджер</p>
+			</div>
+		</div>
+	</div>
+	<!-- END popup -->
 </div>
 <!-- END out-->
 <!-- load scripts -->

@@ -131,10 +131,77 @@
         height: 50px
 .table
     padding-top: 60px
+    margin-bottom: 100px
     &__title
         font-size: 24px
         +farrerons
-        
+    &__body 
+        display: table
+        width: 100%
+        border-collapse: collapse 
+        background: rgba(#fff, 0.4)
+    &__row
+        display: table-row
+        border-bottom: 2px solid #fff
+        &:first-child
+            border-top: 2px solid #fff 
+    &__col
+        display: table-cell
+        width: 50%
+        height: 50px 
+        padding: 0 20px 
+        vertical-align: middle
+        line-height: 1
+        &:nth-child(2)
+            text-align: right
+             
+// popup
+.popup
+    position: fixed
+    top: 85px
+    left: 66px
+    right: 66px
+    bottom: 66px
+    background: rgba(#006595, .98)
+    visibility: hidden
+    opacity: 0
+    +tr(opacity 200ms)
+    +vertical
+    z-index: 2
+    &.is-open
+        visibility: visible
+        opacity: 1 
+    &__in
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        .h3
+            color: #fff
+            font-size: 32px
+            margin-bottom: 40px
+    &__close
+        position: absolute
+        top: -30px
+        right: -50px
+        +s(close)
+        opacity: 0.7
+        +tr(opacity 200ms)
+        &:hover
+            opacity: 1 
+    &__step1
+        &.is-hidden
+            display: none
+    &__step2 
+        &.is-hidden
+            display: none
+        & > p
+            margin-bottom: 15px
+            font-size: 12px
+            line-height: 2.4
+            +ls 
+            +h-l
+            color: rgba(#fff, .5)
+            text-transform: uppercase                            
                                     
 
              

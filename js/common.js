@@ -85,6 +85,26 @@ head.ready(function() {
 		});
 	};
 
+	// popup init/close
+
+	function popupForm(){
+		var popup = $('.js-popup-form');
+
+		$('.js-popup-btn').on('click', function(){
+			popup.addClass('is-open');
+		});
+		popup.find('.js-popup-close').on('click', function(){
+			popup.removeClass('is-open');
+			popup.find('.js-validate').trigger('reset');
+			popup.find('.js-step1').removeClass('is-hidden');
+      		popup.find('.js-step2').addClass('is-hidden');
+		});	
+	};
+
+	if ($('.js-popup-form').length) {
+		popupForm();
+	};
+
 	// feedback form on main page
 
 	$('.js-form-btn').on('click', function(){
