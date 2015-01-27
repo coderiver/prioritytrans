@@ -49,8 +49,31 @@ body
 	padding-top: 84px
 	z-index: 1 
 .center
+	position: relative
 	max-width: 980px
 	margin: 0 auto
+	border: 1px solid rgba(#fff, 0.5)
+	border-width: 0 1px
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 25%
+		width: 25%
+		border: 1px solid rgba(#fff, 0.5)
+		border-width: 0 1px
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 25%
+		width: 1px
+		background: rgba(#fff, 0.5)
+	.footer &
+		&:before, &:after
+			display: none	 	 
 	+r(1112)
 		max-width: 860px 
 	+r(1024)
@@ -385,9 +408,10 @@ body
 			+h-l
 			color: rgba(#006595, .5)
 			+transition(color 200ms, box-shadow 200ms)
-			&:hover
+			&:hover, &.is-active
 				color: #006595
 				box-shadow: 0 1px 0 transparent
+				
 		
 
 // form

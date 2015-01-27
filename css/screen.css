@@ -41,7 +41,10 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .container { position: relative; padding-top: 84px; z-index: 1; }
 
-.center { max-width: 980px; margin: 0 auto; }
+.center { position: relative; max-width: 980px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; }
+.center:before { content: ""; position: absolute; top: 0; bottom: 0; left: 25%; width: 25%; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; }
+.center:after { content: ""; position: absolute; top: 0; bottom: 0; right: 25%; width: 1px; background: rgba(255, 255, 255, 0.5); }
+.footer .center:before, .footer .center:after { display: none; }
 @media only screen and (max-width: 1112px) { .center { max-width: 860px; } }
 @media only screen and (max-width: 1024px) { .center { width: 746px; } }
 
@@ -142,7 +145,7 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .inner-nav li { margin-bottom: 28px; }
 .inner-nav li a { font-size: 11px; text-transform: uppercase; text-decoration: none; padding-bottom: 2px; box-shadow: 0 1px 0 rgba(0, 101, 149, 0.5); letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; color: rgba(0, 101, 149, 0.5); -moz-transition: color 200ms, box-shadow 200ms; -o-transition: color 200ms, box-shadow 200ms; -webkit-transition: color 200ms, box-shadow 200ms; transition: color 200ms, box-shadow 200ms; }
-.inner-nav li a:hover { color: #006595; box-shadow: 0 1px 0 transparent; }
+.inner-nav li a:hover, .inner-nav li a.is-active { color: #006595; box-shadow: 0 1px 0 transparent; }
 
 .form { position: relative; }
 .form__row { margin-bottom: 15px; }
@@ -531,3 +534,13 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .news__img { font-size: 0; }
 .news__img img { width: 100%; height: auto; }
 .news__text { padding: 20px 20px 40px; background: #fff; -moz-transition: background 200ms, color 200ms; -o-transition: background 200ms, color 200ms; -webkit-transition: background 200ms, color 200ms; transition: background 200ms, color 200ms; color: #006596; }
+
+.post article { padding-top: 30px; *zoom: 1; }
+.post article:after { content: " "; display: table; clear: both; }
+.post article img { position: relative; left: -40px; float: left; width: 50%; }
+.post article p { margin-bottom: 25px; line-height: 1.6; }
+.post article p strong { font-size: 18px; font-family: "MyriadProSemibold", Arial, sans-serif; }
+.post__header { display: table-row; width: 100%; }
+.post__date { display: table-cell; width: 25%; vertical-align: baseline; }
+.post__title { display: table-cell; width: 75%; vertical-align: baseline; }
+.post__back { padding: 40px 0; }

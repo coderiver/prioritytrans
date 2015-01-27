@@ -52,4 +52,35 @@
         background: #fff
         +transition(background 200ms, color 200ms)
         color: #006596
+        
+// post
+.post
+    article
+        padding-top: 30px
+        +clr
+        img
+            position: relative
+            left: -40px
+            float: left
+            width: 50%
+        p
+            margin-bottom: 25px
+            line-height: 1.6
+            strong
+                font-size: 18px
+                +myriad-sb      
+    &__header
+        display: table-row
+        width: 100%
+    &__date
+        display: table-cell
+        width: 25%
+        vertical-align: baseline
+    &__title
+        display: table-cell
+        width: 75%
+        vertical-align: baseline
+    &__back
+        padding: 40px 0     
+        
                                
