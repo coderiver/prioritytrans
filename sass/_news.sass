@@ -1,24 +1,10 @@
 // styles for news pages
 .news
     position: relative
-    &__nav
+    .filters
         position: absolute
         top: -65px
-        left: 50%
-        +clr
-        li
-            float: left
-            margin-right: 25px
-            a
-                text-decoration: none
-                color: rgba(#9ebd2b, 0.5)
-                +tr(color 200ms)
-                +h-l
-                font-size: 14px
-                &:hover
-                    color: #9ebd2b
-                &.is-active
-                    color: #9ebd2b   
+        left: 50%   
     &__in
         margin-left: -8%
         font-size: 0
@@ -52,6 +38,21 @@
         background: #fff
         +transition(background 200ms, color 200ms)
         color: #006596
+.filters
+    +clr
+    li
+        float: left
+        margin-right: 25px
+        a
+            text-decoration: none
+            color: rgba(#9ebd2b, 0.5)
+            +tr(color 200ms)
+            +h-l
+            font-size: 14px
+            &:hover
+                color: #9ebd2b
+            &.is-active
+                color: #9ebd2b
         
 // post
 .post
@@ -81,6 +82,61 @@
         width: 75%
         vertical-align: baseline
     &__back
-        padding: 40px 0     
+        padding: 40px 0
         
+.articles
+    position: relative
+    top: -65px
+    &__topper
+        margin-bottom: 55px
+        text-align: center
+        .filters
+            display: inline-block
+    &__item
+        position: relative
+        display: block
+        +clr
+        margin-bottom: 55px
+        text-decoration: none
+        &:before
+            content: ""
+            position: absolute
+            top: 15px
+            left: 15px
+            right: 0
+            bottom: -15px
+            background: #fff
+            opacity: 0
+            +tr(opacity 200ms)
+        &:hover
+            &:before
+                opacity: 1
+            .articles__title
+                color: #000                               
+    &__img
+        position: relative 
+        font-size: 0
+        float: left
+        width: 33.3%
+        margin-right: 2.7%
+        img
+            width: 100%
+    &__content
+        position: relative
+        float: left
+        width: 64%
+        padding-top: 25px
+    &__title
+        position: relative
+        left: -55px
+        margin-bottom: 15px
+        font-size: 18px
+        +myriad-sb
+        color: #006596
+        +tr(color 200ms)
+        z-index: 2
+    &__text
+        color: #000
+        margin-bottom: 20px          
+
                                

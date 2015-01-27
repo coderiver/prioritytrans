@@ -532,7 +532,30 @@ body
 		.m-company__number
 			color: #9ebd2b
 		.m-company__title
-			color: #000							 					
+			color: #000
+
+// pagination
+.pagination
+	text-align: right
+	margin-bottom: 75px
+	ul
+		display: inline-block
+		font-size: 0
+		li
+			display: inline-block
+			margin-left: 10px
+			font-size: 14px
+			a
+				display: block
+				height: 18px
+				line-height: 18px 
+				padding: 0 5px
+				+transition(background 200ms, color 200ms)
+				text-decoration: none
+				color: #000
+				&:hover, &.is-active
+					background: #9ebd2b
+					color: #fff 
 
 
 
