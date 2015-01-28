@@ -115,7 +115,9 @@ body
 			background: transparent
 			color: #fff
 	&.button_small
-		height: 42px				 	    
+		height: 42px
+	.contacts &
+		width: 186px					 	    
 .forward
 	position: relative
 	display: inline-block
@@ -437,7 +439,11 @@ body
 		border-color: #ff6767
 		color: rgba(#ff6767, 0.5)
 		+placeholder
-			color: #ff6767						  		
+			color: #ff6767
+	.contacts &
+		color: #000
+		+placeholder
+			color: rgba(#000, 0.5)								  		
 .textarea
 	height: 70px
 	padding: 5px 12px 

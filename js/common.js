@@ -148,6 +148,36 @@ head.ready(function() {
 		$('.js-bg2').css('opacity', opacity);
 	});
 
+	// map
+	
+  if ($('.map').length) {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('YMapsID', {
+          center: [53.938615, 27.600765],
+          zoom: 14,
+          controls: []
+      });
+      myMap.behaviors.disable('scrollZoom');
+     // Создаем метку с помощью вспомогательного класса.
+        myPlacemark1 = new ymaps.Placemark([53.938615, 27.600765], {
+            // Свойства.
+            
+            balloonContent: 'Luxplast',
+            hintContent: 'Г. МИНСК, УЛ. МЕЛЕЖА 22 А'
+        }, {
+            // Опции.
+            // Стандартная фиолетовая иконка.
+            iconLayout: 'default#image',
+            iconImageSize: [36, 48],
+            iconImageHref: '../img/marker.png'
+           
+        });
+
+     myMap.geoObjects.add(myPlacemark1)
+
+    });
+  };
+
 	// window scroll function
 
 	$(window).scroll(function(){

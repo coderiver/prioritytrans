@@ -1,0 +1,65 @@
+// styles for contacts page
+.contacts
+    position: relative
+    padding-bottom: 100px
+    z-index: 2
+    &__form
+        width: 328px
+    &__step1, &__step2
+        &.is-hidden
+            display: none
+    &__step2
+        & > p
+            margin-bottom: 20px 
+            +h-l
+            font-size: 12px
+            text-transform: uppercase
+            +ls
+            line-height: 2 
+.adress
+    margin-bottom: 25px 
+    +h-l
+    font-size: 12px
+    line-height: 1.6
+    text-transform: uppercase
+    color: #404040
+    +ls
+    a
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    a[href^=mailto]
+        color: #006596
+    a[href^=tel]
+        color: #84ac00
+.download
+    padding-top: 40px
+.doc-link
+    position: relative
+    display: inline-block
+    +clr
+    font-style: italic
+    color: #006596 
+    img
+        display: inline-block
+        vertical-align: middle
+        margin-right: 18px
+    span
+        display: inline-block
+        vertical-align: middle
+        text-decoration: underline    
+    &:hover
+        span
+            text-decoration: none
+            
+// map
+.map
+    height: 280px                
+    #YMapsID
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+.ymaps-2-1-18-ground-pane
+    +gray                     
