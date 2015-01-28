@@ -543,14 +543,16 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .filters li a:hover { color: #9ebd2b; }
 .filters li a.is-active { color: #9ebd2b; }
 
-.post article { padding-top: 30px; *zoom: 1; }
-.post article:after { content: " "; display: table; clear: both; }
-.post article img { position: relative; left: -40px; float: left; width: 50%; }
-.post article p { margin-bottom: 25px; line-height: 1.6; }
-.post article p strong { font-size: 18px; font-family: "MyriadProSemibold", Arial, sans-serif; }
-.post__header { display: table-row; width: 100%; }
-.post__date { display: table-cell; width: 25%; vertical-align: baseline; }
-.post__title { display: table-cell; width: 75%; vertical-align: baseline; }
+.post { margin-bottom: 15px; }
+.post__article { padding-top: 30px; *zoom: 1; }
+.post__article:after { content: " "; display: table; clear: both; }
+.post__article img { position: relative; left: -40px; float: left; width: 50%; }
+.post__article p { margin-bottom: 25px; line-height: 1.6; }
+.post__article p strong { font-size: 18px; font-family: "MyriadProSemibold", Arial, sans-serif; }
+.post__article h4 { margin-bottom: 25px; font-size: 34px; font-family: "FarreronsSerifregular", Arial, sans-serif; font-weight: normal; }
+.post__article.right img { float: right; left: 0; width: 50%; margin-left: 44px; }
+.post__date { padding-top: 21px; }
+.post__title { position: relative; z-index: 2; }
 .post__back { padding: 40px 0; }
 
 .articles { position: relative; top: -65px; }

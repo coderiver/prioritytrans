@@ -56,7 +56,8 @@
         
 // post
 .post
-    article
+    margin-bottom: 15px
+    &__article
         padding-top: 30px
         +clr
         img
@@ -69,18 +70,23 @@
             line-height: 1.6
             strong
                 font-size: 18px
-                +myriad-sb      
-    &__header
-        display: table-row
-        width: 100%
+                +myriad-sb
+        h4
+            margin-bottom: 25px
+            font-size: 34px
+            +farrerons
+            font-weight: normal        
+        &.right
+            img
+                float: right
+                left: 0
+                width: 50%
+                margin-left: 44px      
     &__date
-        display: table-cell
-        width: 25%
-        vertical-align: baseline
+        padding-top: 21px 
     &__title
-        display: table-cell
-        width: 75%
-        vertical-align: baseline
+        position: relative
+        z-index: 2
     &__back
         padding: 40px 0
         
