@@ -178,6 +178,54 @@ head.ready(function() {
     });
   };
 
+
+  	// calculator
+
+  	function calculation(){
+
+  		// add one more input
+  		$('.js-calc-add').on('click', function(){
+  			$('.js-calc-throw').show();
+  			$(this).hide();
+  			return false;
+  		});
+  		// input change events
+  		$('.js-calc-block').each(function(){
+  			var item = $(this);
+  			item.find('.js-calc-input').on('input', function(){
+  				item.find('.js-calc-reset').addClass('is-active');
+  				item.find('.js-calc-list').addClass('is-open');
+  				if ($(this).val().length == 0) {
+  					item.find('.js-calc-reset').removeClass('is-active');
+  					item.find('.js-calc-list').removeClass('is-open');
+  				};
+  			});
+  			item.find('.js-calc-reset').on('click', function(){
+  				$(this).prev().val('');
+  				$(this).next().removeClass('is-open');
+  				$(this).removeClass('is-active');
+  			});
+  		});
+  		// result button
+  		$('.js-calc-sbmt').on('click', function(){
+  			$('.js-calc-insert').addClass('is-hidden');
+  			$('.js-calc-result').addClass('is-open');
+  		}); 	
+  		// refresh
+  		$('.js-calc-restart').on('click', function(){
+  			$('.js-calc-result').removeClass('is-open');
+  			$('.js-calc-insert').removeClass('is-hidden');
+  			$('.js-calc-input').val('');
+  			$('.js-calc-reset').removeClass('is-active');
+  			$('.js-calc-list').removeClass('is-open');
+  		});
+
+  	}
+  	if ($('.js-calc').length) {
+  		calculation();
+  	};
+  	
+
 	// window scroll function
 
 	$(window).scroll(function(){
