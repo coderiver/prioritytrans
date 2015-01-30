@@ -1,14 +1,132 @@
 // styles for geography page
 .geography
     position: relative
+    &__topper
+        position: relative
+        z-index: 2
+    &__content
+        position: relative
+        z-index: 2
+        .col_padding
+            padding-top: 222px    
+.inner-map
     overflow: hidden
-.map
     position: relative
-    height: 1335px
-    &__in
+    top: -529px
+    padding-top: 329px
+    margin-bottom: -929px
+    z-index: 1
+    &.is-fixed
+        position: fixed
+        top: -625px
+    &__draggable
+        position: relative
+        height: 1400px
+    &__img
+        position: relative
+        width: 2000px
+        img
+            width: 100%
+    &__route
+        position: absolute
+        top: 610px
+        left: 240px
+    &__hint
+        position: absolute
+        top: 529px
+        left: 50%
+        +transform(translateX(-50%))
+        +s(hand)
+        z-index: 2
+        &:before
+            content: ""
+            position: absolute
+            top: 3px
+            left: -25px
+            +s(drag-left)
+        &:after
+            content: ""
+            position: absolute
+            top: 3px
+            right: -25px
+            +s(drag-right)        
+.city
+    position: absolute
+    padding-left: 12px
+    font-size: 12px
+    color: rgba(#000, 0.7)
+    &:before
+        content: ""
+        position: absolute
+        top: 5px
+        left: 0
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background: #575a5b
+    &[href]
+        text-decoration: none
+        +tr(color 200ms)
+        &:hover
+            color: #12709d
+        &:before
+            top: 2px
+            left: -2px
+            width: 13px
+            height: 13px
+            background: #b6d2df
+        &:after
+            content: ""                        
+            position: absolute
+            top: 5px
+            left: 1px
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background: #12709d
+    &.city_port
+        &:before
+            top: 0
+            left: -5px
+            +s(unchor)
+        &:after
+            display: none
+.g-point
+    position: relative
+    padding: 27px 27px 0 37px
+    height: 444px
+    &.g-point_blue
+        .g-point__bg
+            background: #e0eef3       
+    &__bg
         position: absolute
         top: 0
-        bottom: 0
-        width: 1495px
-    &__img
-        font-size: 0        
+        right: 0
+        left: 0
+        min-height: 222px
+        background: #fff  
+        font-size: 0
+        overflow: hidden
+        img
+            width: 100%
+            min-height: 222px
+    &__title
+        position: relative
+        padding-bottom: 20px
+        margin-bottom: 25px 
+        color: #116f9d
+        font-size: 18px
+        &:before
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 30px
+            height: 2px
+            background: #9ebd2b
+    &__text
+        position: relative        
+.unchor
+    position: relative
+    display: inline-block
+    +s(unchor-big)

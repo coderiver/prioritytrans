@@ -224,12 +224,29 @@ head.ready(function() {
   	if ($('.js-calc').length) {
   		calculation();
   	};
-  	
 
+  	// inner -map
+  	$(".js-draggable").draggable();
+  	
+  	function innerMapFixed(){
+  		var height = $(window).outerHeight();
+  		//height = (height - 84);
+  		if ($(window).scrollTop() >= 700) {
+  			$('.js-inner-map').addClass('is-fixed');
+  			$('.js-geography-cont').css('margin-top', height);
+  		}
+  		else {
+  			$('.js-inner-map').removeClass('is-fixed');
+  			$('.js-geography-cont').css('margin-top', 0);
+  		}
+  		
+  	}
+  	innerMapFixed();
 	// window scroll function
 
 	$(window).scroll(function(){
 		cloudsParallax();
+		innerMapFixed();
 	});
 	
 
