@@ -242,11 +242,36 @@ head.ready(function() {
   		
   	}
   	innerMapFixed();
+
+  	// scroll down btn
+  		
+  	$('.js-scroll-down').on('click', function(){
+  		$('html, body').animate({
+       		scrollTop: ($('.m-geography').offset().top - 200)
+    	}, 500);
+    	return false;
+  	});
+
+  	// animation appearing
+
+  	function appeareAnimation(){ 
+  		$('.animate').each(function(){
+  			var item_coor = $(this).offset().top,
+  				start_Y = ($(window).scrollTop() + $(window).height());
+  			if (start_Y >= item_coor) {
+  				$(this).addClass('is-animated');
+  			};
+  		
+  		});
+  	}
+  	appeareAnimation();
+
 	// window scroll function
 
 	$(window).scroll(function(){
 		cloudsParallax();
 		innerMapFixed();
+		appeareAnimation();
 	});
 	
 

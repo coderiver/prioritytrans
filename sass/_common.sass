@@ -121,24 +121,31 @@ body
 .forward
 	position: relative
 	display: inline-block
-	padding-right: 17px 
+	margin-right: 17px
+	padding-bottom: 1px
+	box-shadow: 0 1px 0 rgba(#9ebd2b, 0.5)
 	color: #9ebd2b
 	+h-r
 	font-size: 11px
+	text-decoration: none
 	text-transform: uppercase
 	+ls
+	+tr(box-shadow 200ms)
 	&:after
 		content: ""
 		position: absolute
 		top: 3px
-		right: 0
+		right: -17px
 		+arr(7, 9, #9ebd2b, r)
 	&:hover
-		text-decoration: none
+		box-shadow: none
 	&.forward_blue
 		color: #006596
+		box-shadow: 0 1px 0 rgba(#006596, 0.5)
 		&:after
 			+arr(7, 9, #006596, r)
+		&:hover
+			box-shadow: none		
 .back
 	position: relative
 	display: inline-block
@@ -210,9 +217,13 @@ body
 		position: absolute
 		bottom: 0
 		left: 0
-		width: 135px
+		width: 0
+		+tr(width 200ms 900ms)
 		height: 2px
 		background: #187ea6
+	&.is-animated
+		&:after
+			width: 135px 	
 .h3, .h4
 	font-size: 32px
 	+farrerons
@@ -228,6 +239,10 @@ body
 	background: rgba(#fff, .9)
 	+clr
 	z-index: 3
+	opacity: 0
+	+tr(opacity 200ms)
+	&.is-animated
+		opacity: 1 
 	&.box_top
 		top: 0
 		left: 0
@@ -254,11 +269,18 @@ body
 		padding: 0 66px 
 .logo
 	float: left
-	padding-top: 20px
 	a
+		position: relative
 		display: block
+		width: 164px
+		height: 85px 
 		+hide-text
-		+s(logo)
+		&:before
+			content: ""
+			position: absolute
+			top: 20px
+			left: 0
+			+s(logo)
 .phone
 	float: right
 	padding-top: 34px 					     
@@ -292,6 +314,7 @@ body
 		right: 0
 		height: 2px 		
 		background: #01719d
+		+gpu
 		+tr(all 200ms)
 	&:after
 		content: ""
@@ -301,10 +324,13 @@ body
 		right: 0
 		height: 2px
 		background: #01719d
+		+gpu
 		+tr(all 200ms)
 	&:hover
-		span
-			background: #01719d 	
+		&:before
+			top: -2px
+		&:after
+			top: 20px	  	
 	&.is-open
 		span
 			opacity: 0
@@ -316,7 +342,7 @@ body
 			top: 10px
 			width: 40px
 			+transform(rotate(-45deg))
-.copyrights, .design
+.copyrights
 	float: left
 	padding-top: 33px
 	+h-r
@@ -326,6 +352,17 @@ body
 	+ls							
 .design
 	float: right
+	padding-top: 33px
+	a
+		+h-r
+		font-size: 11px
+		color: #9f9f9f
+		text-decoration: none
+		text-transform: uppercase
+		+ls
+		+tr(color 200ms)
+		&:hover
+			color: rgba(#9f9f9f, 0.7)
 .lang
 	display: inline-block
 	vertical-align: middle
@@ -565,7 +602,19 @@ body
 					
 .reset
 	display: inline-block
-	+s(reset)					 
+	+s(reset)
+
+// appearing animation
+
+.animate
+	opacity: 0
+	+tr(opacity 200ms)
+	&.is-animated
+		opacity: 1 
+@for $i from 1 through 20
+	.animate_#{$i}
+		transition-delay: 300ms*$i!important
+								 
 
 
 

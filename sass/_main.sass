@@ -2,6 +2,7 @@
 
 // container index
 .container_index
+
 	background: url(../img/europe.jpg) 100% 560px no-repeat
 	+rh(900)
 		background-position: 100% 460px
@@ -54,7 +55,7 @@
 // topper			
 .topper
 	margin-top: 7%
-	margin-bottom: 200px
+	padding-bottom: 200px
 	background: url(../img/img1.jpg) 100% 0 no-repeat
 	+rh(960)
 		margin-top: 6%
@@ -185,7 +186,11 @@
 			left: -48px
 			bottom: 0
 			width: 338px
-			border: 8px solid #fff 	
+			border: 8px solid transparent
+			+tr(border-color 200ms 600ms)
+		&.is-animated
+			&:before
+				border-color: #fff	 	
 	&__about
 		position: relative
 		width: 190%
@@ -329,6 +334,7 @@
 		position: absolute
 		bottom: 40px
 		left: 280px
+		z-index: 2
 
 // m-articles
 .m-articles
