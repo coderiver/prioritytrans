@@ -23,6 +23,8 @@
 		text-transform: uppercase
 		color: rgba(#006596, .9)
 		letter-spacing: 2px
+		&.is-active
+			color: #8fb40a
 	&__list
 		li
 			margin-bottom: 13px
@@ -196,6 +198,9 @@
 					display: none
 	&__main
 		position: relative
+		display: block
+		text-decoration: none
+		color: #000
 		padding-top: 55px
 		padding-bottom: 55px
 		.h3
@@ -211,7 +216,7 @@
 			+tr(border-color 200ms 600ms)
 		&.is-animated
 			&:before
-				border-color: #fff	 	
+				border-color: #fff		 	
 	&__about
 		position: relative
 		width: 190%
