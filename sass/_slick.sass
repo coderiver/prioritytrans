@@ -113,7 +113,7 @@
 	li
 		position: relative
 		display: inline-block
-		padding: 0 7px 
+		padding: 0 3px 
 		&.slick-active
 			button
 				opacity: 1
@@ -121,14 +121,24 @@
 			display: none 
 				 
 	button
+		position: relative
 		display: block
-		width: 6px
-		height: 6px
-		background: #fff
+		width: 12px
+		height: 12px
+		background: transparent
 		cursor: pointer
 		+hide-text
 		border-radius: 50%
-		opacity: 0.5 
+		opacity: 0.5
+		&:before
+			content: ""
+			position: absolute
+			top: 3px
+			left: 3px
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: #fff  
 		&:hover
 			opacity: 1
 	.comm &

@@ -158,10 +158,24 @@
 		position: absolute
 		right: 0
 		top: 0
+		margin-right: 350px
+		+r(1440)
+			margin-right: 250px
+		+r(1200)
+			margin-right: 200px
+		+r(1024)
+			margin-right: 100px	 	
 	.cloud2
 		position: absolute
 		left: 0
-		bottom: -50px 	
+		bottom: -50px
+		margin-left: 500px
+		+r(1440)
+			margin-left: 300px
+		+r(1200)
+			margin-left: 200px
+		+r(1024)
+			margin-left: 100px 		 	
 	&__text
 		width: 380px
 		p
@@ -256,12 +270,13 @@
 			width: 30px 
 			background: #9ebd2b
 	&__more
-		padding-left: 50px
+		padding-left: 30px
 		height: 222px 
 		+vertical
 		a
 			display: inline-block
 			vertical-align: middle
+			padding: 20px 0 20px 20px
 			font-size: 28px
 			+farrerons-i
 			line-height: 1 
@@ -302,11 +317,12 @@
 	&__date-number
 		position: absolute
 		top: 0
-		bottom: 0
+		bottom: 60px
 		right: 0
 		left: 0
 		font-size: 24px
 		color: #fff
+		text-decoration: none
 		text-align: center
 		z-index: 2
 		span
@@ -316,9 +332,15 @@
 			+farrerons-li		
 	&__article
 		position: relative
+		display: block
 		height: 294px
-		padding: 50px 0 0 36px 
+		padding: 50px 0 0 36px
+		text-decoration: none
+		color: #000  
 		background: #fff
+		+tr(background 200ms)
+		&:hover
+			background: #e2eeb6 
 	&__title
 		margin-bottom: 20px
 		font-size: 18px
@@ -330,6 +352,8 @@
 		position: absolute
 		top: 45px
 		left: 25px
+		text-decoration: none
+		z-index: 2
 	.forward
 		position: absolute
 		bottom: 40px
@@ -341,6 +365,9 @@
 	position: relative
 	padding-left: 100px
 	padding-right: 66px
+	.h3
+		display: inline-block
+		text-decoration: none
 	+r(1024)
 		padding-left: 32px 
 		padding-right: 0
@@ -359,6 +386,9 @@
 		padding-top: 34px
 		& > li
 			margin-bottom: 30px
+			& > a
+				display: block
+				text-decoration: none
 	&__date
 		margin-bottom: 15px
 		color: rgba(#000, .5)
