@@ -187,6 +187,13 @@
 // m-company
 .m-company
 	margin-bottom: 80px
+	.col
+		+r(1024)
+			width: 33.3%
+			&.last
+				float: right
+				.m-company__col
+					display: none
 	&__main
 		position: relative
 		padding-top: 55px
@@ -291,6 +298,8 @@
 // m-news
 .m-news
 	position: relative
+	+r(1024)
+		width: 60% 
 	&__date
 		position: relative 
 		height: 294px
@@ -369,6 +378,7 @@
 		display: inline-block
 		text-decoration: none
 	+r(1024)
+		width: 40% 
 		padding-left: 32px 
 		padding-right: 0
 	&:before
@@ -381,6 +391,7 @@
 		background: url(../img/img3.jpg) 100% 0 no-repeat
 		+r(1024)
 			left: 77px
+			right: -73px
 	&__list
 		position: relative
 		padding-top: 34px

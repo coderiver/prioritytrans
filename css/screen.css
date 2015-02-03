@@ -333,6 +333,9 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .m-geography__next { padding: 94px 0 236px; text-align: right; }
 
 .m-company { margin-bottom: 80px; }
+@media only screen and (max-width: 1024px) { .m-company .col { width: 33.3%; }
+  .m-company .col.last { float: right; }
+  .m-company .col.last .m-company__col { display: none; } }
 .m-company__main { position: relative; padding-top: 55px; padding-bottom: 55px; }
 .m-company__main .h3 { margin-bottom: 20px; }
 .m-company__main:before { content: ""; position: absolute; top: 0; left: -48px; bottom: 0; width: 338px; border: 8px solid transparent; -moz-transition: border-color 200ms 600ms; -o-transition: border-color 200ms 600ms; -webkit-transition: border-color 200ms; -webkit-transition-delay: 600ms; transition: border-color 200ms 600ms; }
@@ -359,6 +362,7 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .m-media { position: relative; }
 
 .m-news { position: relative; }
+@media only screen and (max-width: 1024px) { .m-news { width: 60%; } }
 .m-news__date { position: relative; height: 294px; margin-top: 97px; }
 .m-news__date-img { position: absolute; top: 0; bottom: 0; right: 0; left: 0; font-size: 0; }
 .m-news__date-img img { width: 100%; height: 100%; }
@@ -375,9 +379,9 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 .m-articles { position: relative; padding-left: 100px; padding-right: 66px; }
 .m-articles .h3 { display: inline-block; text-decoration: none; }
-@media only screen and (max-width: 1024px) { .m-articles { padding-left: 32px; padding-right: 0; } }
+@media only screen and (max-width: 1024px) { .m-articles { width: 40%; padding-left: 32px; padding-right: 0; } }
 .m-articles:before { content: ""; position: absolute; top: 55px; left: 100px; right: -44px; bottom: 0; background: url(../img/img3.jpg) 100% 0 no-repeat; }
-@media only screen and (max-width: 1024px) { .m-articles:before { left: 77px; } }
+@media only screen and (max-width: 1024px) { .m-articles:before { left: 77px; right: -73px; } }
 .m-articles__list { position: relative; padding-top: 34px; }
 .m-articles__list > li { margin-bottom: 30px; }
 .m-articles__list > li > a { display: block; text-decoration: none; }
