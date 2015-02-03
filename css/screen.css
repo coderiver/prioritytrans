@@ -277,6 +277,7 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .footer__list li { margin-bottom: 13px; }
 .footer__list li a { font-size: 11px; letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: rgba(0, 101, 150, 0.5); -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 .footer__list li a:hover { color: #006596; }
+.footer__list li a.is-active { color: #8fb40a; }
 
 .contacts__info { margin-bottom: 25px; }
 .contacts__info p { margin-bottom: 5px; }
