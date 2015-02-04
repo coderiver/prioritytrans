@@ -390,7 +390,10 @@ body
 			font-size: 13px
 			+ls
 			text-transform: uppercase
-			text-decoration: none 
+			text-decoration: none
+			+tr(opacity 200ms)
+			&:hover
+				opacity: 0.8  
 			&.is-active
 				opacity: 1 
 				

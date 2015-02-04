@@ -134,7 +134,8 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .lang li:after { content: ""; position: absolute; left: 50%; top: 0; width: 33px; margin-left: -15px; height: 2px; background: #01719d; }
 .lang li:first-child { padding-right: 0; }
 .lang li:first-child:after { display: none; }
-.lang li a { color: #01719d; opacity: 0.5; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+.lang li a { color: #01719d; opacity: 0.5; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.lang li a:hover { opacity: 0.8; }
 .lang li a.is-active { opacity: 1; }
 
 .nav { position: fixed; top: 85px; left: 66px; right: 66px; bottom: 66px; background: rgba(255, 255, 255, 0.97); z-index: 2; -moz-transform: translateX(-105%); -ms-transform: translateX(-105%); -webkit-transform: translateX(-105%); transform: translateX(-105%); -moz-transition: -moz-transform 300ms; -o-transition: -o-transform 300ms; -webkit-transition: -webkit-transform 300ms; transition: transform 300ms; text-align: center; font-size: 0; }
