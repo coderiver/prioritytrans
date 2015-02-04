@@ -1,6 +1,7 @@
 // styles for news pages
 .news
     position: relative
+    z-index: 2
     .filters
         position: absolute
         top: -65px
@@ -25,7 +26,10 @@
         &:hover
             .news__text
                 background: #e2eeb6
-                color: #000         
+                color: #000
+        &.is-white
+            .news__text
+                background: #fff                  
         .date
             margin-bottom: 15px
     &__img
@@ -35,7 +39,6 @@
             height: auto
     &__text
         padding: 20px 20px 40px
-        background: #fff
         +transition(background 200ms, color 200ms)
         color: #006596
 .filters

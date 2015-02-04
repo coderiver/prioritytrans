@@ -702,17 +702,18 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .popup__step2.is-hidden { display: none; }
 .popup__step2 > p { margin-bottom: 15px; font-size: 12px; line-height: 2.4; letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; color: rgba(255, 255, 255, 0.5); text-transform: uppercase; }
 
-.news { position: relative; }
+.news { position: relative; z-index: 2; }
 .news .filters { position: absolute; top: -65px; left: 50%; }
 .news__in { margin-left: -8%; font-size: 0; }
 .news__block { display: inline-block; vertical-align: top; width: 25%; margin-left: 8%; margin-bottom: 60px; font-size: 14px; }
 .news__block:nth-child(6n+1) .news__item, .news__block:nth-child(6n+2) .news__item, .news__block:nth-child(6n+3) .news__item { left: -42px; }
 .news__item { position: relative; display: block; text-decoration: none; }
 .news__item:hover .news__text { background: #e2eeb6; color: #000; }
+.news__item.is-white .news__text { background: #fff; }
 .news__item .date { margin-bottom: 15px; }
 .news__img { font-size: 0; }
 .news__img img { width: 100%; height: auto; }
-.news__text { padding: 20px 20px 40px; background: #fff; -moz-transition: background 200ms, color 200ms; -o-transition: background 200ms, color 200ms; -webkit-transition: background 200ms, color 200ms; transition: background 200ms, color 200ms; color: #006596; }
+.news__text { padding: 20px 20px 40px; -moz-transition: background 200ms, color 200ms; -o-transition: background 200ms, color 200ms; -webkit-transition: background 200ms, color 200ms; transition: background 200ms, color 200ms; color: #006596; }
 
 .filters { *zoom: 1; }
 .filters:after { content: " "; display: table; clear: both; }
