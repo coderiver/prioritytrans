@@ -177,7 +177,7 @@ head.ready(function() {
             // Стандартная фиолетовая иконка.
             iconLayout: 'default#image',
             iconImageSize: [36, 48],
-            iconImageHref: '../img/marker.png'
+            iconImageHref: 'img/marker.png'
            
         });
 
