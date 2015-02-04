@@ -113,12 +113,16 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 .phone a { font-size: 12px; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; color: #9f9f9f; text-decoration: none; letter-spacing: 2px; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 .phone a:hover { color: #000; }
 
-.menu-btn { position: relative; display: inline-block; vertical-align: middle; background: transparent; height: 20px; font-size: 0; }
+.menu-left { display: inline-block; vertical-align: middle; }
+.menu-left__btn { display: block; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+.menu-btn { position: relative; display: inline-block; margin-top: 30px; vertical-align: middle; background: transparent; height: 20px; font-size: 0; }
 .menu-btn span { display: inline-block; width: 33px; height: 2px; background: #01719d; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .menu-btn:before { content: ""; position: absolute; top: 0px; left: 0; right: 0; height: 2px; background: #01719d; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
 .menu-btn:after { content: ""; position: absolute; top: 18px; left: 0; right: 0; height: 2px; background: #01719d; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
 .menu-btn:hover:before { top: -2px; }
 .menu-btn:hover:after { top: 20px; }
+.menu-btn.is-open { left: -4px; }
 .menu-btn.is-open span { opacity: 0; }
 .menu-btn.is-open:before { top: 10px; width: 40px; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 .menu-btn.is-open:after { top: 10px; width: 40px; -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }

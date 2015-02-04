@@ -2,7 +2,14 @@ head.ready(function() {
 
 	$('.menu-btn').on('click', function(){
 		$(this).toggleClass('is-open');
+    $('.js-menu-btn-text').toggleClass('is-open');
 		$('.js-nav').toggleClass('is-open');
+    if($('.js-menu-btn-text').hasClass('is-open')){
+      $('.js-menu-btn-text').text('закрыть');
+    }
+    else {
+      $('.js-menu-btn-text').text('меню');
+    }
 	});
 
 	// slick

@@ -294,9 +294,21 @@ body
 		+tr(color 200ms)
 		&:hover
 			color: #000
+.menu-left
+	display: inline-block
+	vertical-align: middle
+	&__btn
+		display: block
+		+h-r
+		font-size: 11px
+		color: #9f9f9f
+		text-transform: uppercase
+		+ls
+		+transform(rotate(-90deg))			
 .menu-btn
 	position: relative
 	display: inline-block
+	margin-top: 30px
 	vertical-align: middle
 	background: transparent
 	height: 20px
@@ -333,6 +345,7 @@ body
 		&:after
 			top: 20px	  	
 	&.is-open
+		left: -4px
 		span
 			opacity: 0
 		&:before
