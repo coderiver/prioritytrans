@@ -197,6 +197,12 @@ head.ready(function() {
   			$(this).hide();
   			return false;
   		});
+      // remove one more input
+      $('.js-calc-remove').on('click', function(){
+        $('.js-calc-throw').hide();
+        $('.js-calc-add').show();
+      });
+
   		// input change events
   		$('.js-calc-block').each(function(){
   			var item = $(this);
@@ -214,6 +220,7 @@ head.ready(function() {
   				$(this).removeClass('is-active');
   			});
   		});
+
   		// result button
   		$('.js-calc-sbmt').on('click', function(){
   			$('.js-calc-insert').addClass('is-hidden');
@@ -226,6 +233,8 @@ head.ready(function() {
   			$('.js-calc-input').val('');
   			$('.js-calc-reset').removeClass('is-active');
   			$('.js-calc-list').removeClass('is-open');
+        $('.js-calc-throw').hide();
+        $('.js-calc-add').show();
   		});
 
   	}

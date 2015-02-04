@@ -130,7 +130,15 @@
     z-index: 2
     .h3
         padding-left: 25%
-        margin-bottom: 40px
+        margin-bottom: 50px
+    &__item
+        position: relative
+    &__number
+        position: absolute
+        top: -26px
+        left: -14px
+        font-size: 14px
+        color: rgba(#000, 0.15)         
     &__name
         margin-bottom: 10px 
         text-transform: uppercase
@@ -138,6 +146,7 @@
         +h-b
         color: #01729d
     &__text
+        padding-right: 15px
         +myriad-i
 .case
     position: relative
@@ -212,10 +221,12 @@
         float: right
         width: 25%
         padding-top: 19px 
-        margin-right: 6%
+        margin-right: 54px
         +r(1112)
-            width: 200px     
+            width: 200px
+            margin-right: 67px      
     &__block
+        position: relative
         display: inline-block
         vertical-align: middle
         width: 244px
@@ -226,6 +237,12 @@
             margin-left: 50px     
         &:first-child
             margin-left: 0
+    &__close
+        position: absolute
+        top: 30px
+        right: -30px
+        +s(close-dark)
+        cursor: pointer        
     &__title
         margin-bottom: 5px 
         font-size: 10px
