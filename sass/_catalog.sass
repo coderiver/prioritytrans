@@ -91,7 +91,9 @@
             +tr(opacity 200ms)
             cursor: pointer
             &:hover
-                opacity: 1 
+                opacity: 1
+            &.current
+                opacity: 1      
         .slick-prev
             left: -18px
             +s(prev-big)
@@ -116,7 +118,7 @@
     &__content
         line-height: 1.6
     &__about
-        margin-bottom: 30px     
+        margin-bottom: 30px  
         a
             color: #006596
             &:hover
@@ -133,6 +135,7 @@
     padding-top: 60px
     margin-bottom: 100px
     &__title
+        margin-bottom: 17px
         font-size: 24px
         +farrerons
     &__body 

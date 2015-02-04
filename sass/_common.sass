@@ -104,6 +104,7 @@ body
 	font-size: 11px
 	text-transform: uppercase
 	color: #fff
+	+ls
 	+tr(all 200ms)
 	&:hover
 		background: #004d73
@@ -614,6 +615,14 @@ body
 @for $i from 1 through 20
 	.animate_#{$i}
 		transition-delay: 300ms*$i!important
+		
+// block with hidden text
+.text-block
+	position: relative
+	overflow: hidden
+	&__btn
+		display: inline-block 
+			
 								 
 
 

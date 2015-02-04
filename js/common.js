@@ -50,17 +50,25 @@ head.ready(function() {
 	// gallery
 
 	$('.js-gallery-for').slick({
-		slidesToShow: 1,
+		  slidesToShow: 1,
     	slidesToScroll: 1,
     	arrows: false,
     	fade: true,
-    	asNavFor: '.js-gallery-nav'
+    	asNavFor: '.js-gallery-nav',
+      onAfterChange: function(){
+          var curIndex = $('.js-gallery-for').slickCurrentSlide();
+          $('.js-gallery-nav').find('.slick-slide').removeClass('current');
+          $('.js-gallery-nav').find('.slick-slide[index='+curIndex+']').addClass('current');
+      }
 	});
 	$('.js-gallery-nav').slick({
-		slidesToShow: 4,
+		  slidesToShow: 4,
     	slidesToScroll: 1,
     	asNavFor: '.js-gallery-for',
-    	focusOnSelect: true
+    	focusOnSelect: true,
+      onInit: function(){
+        $('.js-gallery-nav').find('.slick-slide[index="0"]').addClass('current');
+      }
 	});
 
 
@@ -257,7 +265,7 @@ head.ready(function() {
   	function appeareAnimation(){ 
   		$('.animate').each(function(){
   			var item_coor = $(this).offset().top,
-  				start_Y = ($(window).scrollTop() + $(window).height());
+  				start_Y = ($(document).scrollTop() + $(window).height());
   			if (start_Y >= item_coor) {
   				$(this).addClass('is-animated');
   			};
@@ -266,6 +274,32 @@ head.ready(function() {
   	}
   	appeareAnimation();
 
+    // hide text
+
+    function hideText(text, length){
+      if (text == null) {
+              return "";
+          }
+          if (text.length <= length) {
+              return text;
+          }
+          text = text.substring(0, length);
+          last = text.lastIndexOf(" ");
+          text = text.substring(0, last);
+          $('.js-hdt-btn').show();
+          return text + "...";
+          
+    }
+
+    var text = $('.js-hdt').text();
+    $('.js-hdt').text(hideText(text, 400));
+
+    $('.js-hdt-btn').on('click', function(){
+      $('.js-hdt').text(text);
+      $(this).hide();
+      return false;
+    });
+    
 	// window scroll function
 
 	$(window).scroll(function(){
