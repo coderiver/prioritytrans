@@ -43,6 +43,9 @@
         color: #006596
 .filters
     +clr
+    margin-left: -28px
+    +r(1112)
+        margin-left: 0
     li
         float: left
         margin-right: 25px
@@ -59,7 +62,18 @@
         
 // post
 .post
+    position: relative
+    z-index: 2
     margin-bottom: 15px
+    &__content
+        position: relative
+        top: -60px
+        margin-bottom: -60px
+        .h3
+            position: relative
+            left: -25%
+            margin-bottom: 10px
+            width: 125%
     &__article
         padding-top: 30px
         +clr
