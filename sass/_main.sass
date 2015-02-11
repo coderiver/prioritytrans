@@ -6,7 +6,7 @@
 	background: url(../img/europe.jpg) 100% 560px no-repeat
 	+rh(900)
 		background-position: 100% 460px
-	+r(1024)
+	+r(1024) 
 		background-position: 130px 300px	
 
 // footer
@@ -55,12 +55,18 @@
 			text-decoration: none
 		a
 			font-size: 12px
-			
+.center>*
+	position: relative
+	z-index: 1			
 // topper			
 .topper
 	margin-top: 7%
 	padding-bottom: 200px
-	background: url(../img/img1.jpg) 100% 0 no-repeat
+	
+	.center__wrap
+		background: url(../img/img1.jpg) 100% 0 no-repeat
+		+rh(860)
+			background-size: 40% auto
 	+rh(960)
 		margin-top: 6%
 	+rh(900)

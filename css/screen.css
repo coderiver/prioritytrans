@@ -44,6 +44,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .container { position: relative; padding-top: 84px; z-index: 1; }
 
 .center { position: relative; max-width: 980px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; }
+.center .center__wrap { position: relative; z-index: 5; }
 .center:before { content: ""; position: absolute; top: 0; bottom: 0; left: 25%; width: 25%; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; }
 .center:after { content: ""; position: absolute; top: 0; bottom: 0; right: 25%; width: 1px; background: rgba(255, 255, 255, 0.5); }
 .center .center__lines { height: 1500px; position: absolute; bottom: 0; width: 100%; height: 1px; }
@@ -152,11 +153,15 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .design a:hover { color: rgba(159, 159, 159, 0.7); }
 
 .lang { display: inline-block; vertical-align: middle; }
-.lang li { position: relative; padding-top: 5px; text-align: center; }
+.lang li:first-child a { top: 0; }
+.lang li:last-child a { top: 0; }
+.lang:hover li:first-child a { top: -10px; }
+.lang:hover li:last-child a { top: 10px; }
+.lang li { position: relative; padding-top: 5px; text-align: center; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .lang li:after { content: ""; position: absolute; left: 50%; top: 0; width: 33px; margin-left: -15px; height: 2px; background: #01719d; }
 .lang li:first-child { padding-right: 0; }
 .lang li:first-child:after { display: none; }
-.lang li a { color: #01719d; opacity: 0.5; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
+.lang li a { color: #01719d; opacity: 0.5; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; display: block; position: relative; }
 .lang li a:hover { opacity: 0.8; }
 .lang li a.is-active { opacity: 1; }
 .lang li a.is-active:hover { opacity: 0.8; }
@@ -176,8 +181,9 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .menu__list a.current { color: #8eb30a; }
 
 .inner-nav li { margin-bottom: 28px; }
-.inner-nav li a { font-size: 11px; text-transform: uppercase; text-decoration: none; padding-bottom: 2px; box-shadow: 0 1px 0 rgba(0, 101, 149, 0.5); letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; color: rgba(0, 101, 149, 0.5); -moz-transition: color 200ms, box-shadow 200ms; -o-transition: color 200ms, box-shadow 200ms; -webkit-transition: color 200ms, box-shadow 200ms; transition: color 200ms, box-shadow 200ms; }
+.inner-nav li a { font-size: 11px; text-transform: uppercase; text-decoration: none; padding-bottom: 2px; box-shadow: 0 1px 0 rgba(0, 101, 149, 0.5); position: relative; cursor: pointer; letter-spacing: 1px; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; color: rgba(0, 101, 149, 0.5); -moz-transition: color 200ms, box-shadow 200ms; -o-transition: color 200ms, box-shadow 200ms; -webkit-transition: color 200ms, box-shadow 200ms; transition: color 200ms, box-shadow 200ms; }
 .inner-nav li a:hover, .inner-nav li a.is-active { color: #006595; box-shadow: 0 1px 0 transparent; }
+.inner-nav li a:before { content: " "; position: absolute; top: -10px; bottom: -10px; right: -10px; left: -10px; cursor: pointer; }
 
 .form { position: relative; }
 .form__row { margin-bottom: 15px; }
@@ -313,7 +319,11 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .contacts__info p, .contacts__info a { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: rgba(64, 64, 64, 0.5); font-family: "HelveticaNeueCyrLight", Arial, sans-serif; font-size: 11px; text-decoration: none; }
 .contacts__info a { font-size: 12px; }
 
-.topper { margin-top: 7%; padding-bottom: 200px; background: url(../img/img1.jpg) 100% 0 no-repeat; }
+.center > * { position: relative; z-index: 1; }
+
+.topper { margin-top: 7%; padding-bottom: 200px; }
+.topper .center__wrap { background: url(../img/img1.jpg) 100% 0 no-repeat; }
+@media only screen and (max-height: 860px) { .topper .center__wrap { background-size: 40% auto; } }
 @media only screen and (max-height: 960px) { .topper { margin-top: 6%; } }
 @media only screen and (max-height: 900px) { .topper { margin-top: 3%; } }
 @media only screen and (max-height: 860px) { .topper { margin-top: 7%; background-size: 40% auto; } }

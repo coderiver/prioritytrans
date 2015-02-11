@@ -56,6 +56,9 @@ p
 	margin: 0 auto
 	border: 1px solid rgba(#fff, 0.5)
 	border-width: 0 1px
+	.center__wrap
+		position: relative
+		z-index: 5 
 	&:before
 		content: ""
 		position: absolute
@@ -441,10 +444,26 @@ p
 .lang
 	display: inline-block
 	vertical-align: middle
+	li:first-child
+		a
+			top: 0 
+	li:last-child
+		a
+			top: 0 
+			
+	&:hover
+		li:first-child
+			a
+				top: -10px 
+		li:last-child
+			a
+				top: 10px 
+
 	li
 		position: relative
 		padding-top: 5px
 		text-align: center
+		+transition(all .2s linear)
 		&:after
 			content: ""
 			position: absolute
@@ -465,7 +484,9 @@ p
 			+ls
 			text-transform: uppercase
 			text-decoration: none
-			+tr(opacity 200ms)
+			+tr(all 200ms)
+			display: block
+			position: relative
 			&:hover
 				opacity: 0.8  
 			&.is-active
@@ -523,6 +544,8 @@ p
 			text-decoration: none
 			padding-bottom: 2px
 			box-shadow: 0 1px 0 rgba(#006595, .5)
+			position: relative
+			cursor: pointer
 			+ls
 			+h-l
 			color: rgba(#006595, .5)
@@ -530,7 +553,14 @@ p
 			&:hover, &.is-active
 				color: #006595
 				box-shadow: 0 1px 0 transparent
-				
+			&:before
+				content: ' '
+				position: absolute
+				top: -10px 
+				bottom: -10px 
+				right: -10px 
+				left: -10px  
+				cursor: pointer
 		
 
 // form
