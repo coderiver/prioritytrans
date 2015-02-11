@@ -255,10 +255,12 @@ head.ready(function() {
   	
   	function innerMapFixed(){
   		var height = $(window).outerHeight();
+      $('.center__lines .line').css('height', height);
   		//height = (height - 84);
   		if ($(window).scrollTop() >= 700) {
   			$('.js-inner-map').addClass('is-fixed');
   			$('.js-geography-cont').css('margin-top', height);
+
   		}
   		else {
   			$('.js-inner-map').removeClass('is-fixed');
