@@ -39,7 +39,9 @@ body
 	font-size: 14px 
 	line-height: 1.4
 	background: #eef4f6 
-
+p
+	letter-spacing: 0.05em 
+	line-height: 24px
 =ls
 	letter-spacing: 1px 	
 
@@ -139,7 +141,14 @@ body
 		right: -17px
 		+arr(7, 9, #9ebd2b, r)
 	&:hover
-		box-shadow: none
+		box-shadow: none		
+	&:before
+		content: "" 
+		position: absolute
+		top: -15px
+		left: -30px
+		right: -30px
+		bottom: -15px	
 	&.forward_blue
 		color: #006596
 		box-shadow: 0 1px 0 rgba(#006596, 0.5)
@@ -150,19 +159,29 @@ body
 .back
 	position: relative
 	display: inline-block
-	padding-left: 17px
+	margin-left: 17px
 	text-decoration: none
 	color: #9ebd2b
 	+h-r
 	text-transform: uppercase
 	font-size: 11px
 	+ls
+	box-shadow: 0 1px 0 rgba(#9ebd2b, 0.5)
 	&:after
 		content: ""
 		position: absolute
 		top: 3px
-		left: 0
-		+arr(7, 9, #9ebd2b, l)				
+		left: -17px
+		+arr(7, 9, #9ebd2b, l)	
+	&:hover
+		box-shadow: none
+	&:before
+		content: "" 
+		position: absolute
+		top: -15px
+		left: -30px
+		right: -15px
+		bottom: -15px			
 .down
 	display: inline-block
 	+s(down)
@@ -213,6 +232,7 @@ body
 	font-size: 49px
 	text-transform: uppercase
 	font-weight: normal
+	letter-spacing: 0.1em 
 	&:after
 		content: ""
 		position: absolute
@@ -366,7 +386,8 @@ body
 	+ls							
 .design
 	float: right
-	padding-top: 33px
+	padding-top: 18px
+	margin: 0 -15px 0 0 
 	a
 		+h-r
 		font-size: 11px
@@ -375,6 +396,8 @@ body
 		text-transform: uppercase
 		+ls
 		+tr(color 200ms)
+		display: inline-block
+		padding: 15px 
 		&:hover
 			color: rgba(#9f9f9f, 0.7)
 .lang
@@ -409,6 +432,8 @@ body
 				opacity: 0.8  
 			&.is-active
 				opacity: 1 
+				&:hover
+					opacity: 0.8  
 				
 // navigation
 .nav
@@ -638,6 +663,10 @@ body
 	overflow: hidden
 	&__btn
 		display: inline-block 
+		&.is-hide
+			display: none
+	.js-hdt-btn-hide
+		margin-left: 5px
 			
 								 
 

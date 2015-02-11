@@ -99,17 +99,23 @@
 			text-transform: uppercase
 			letter-spacing: 2px
 			text-decoration: none
+			padding: 0 15px 15px
+			margin: -15px  
 			&:before
 				content: ""
 				position: absolute
-				top: 7px
-				left: 0
+				// top: 7px
+				top: 22px
+				// left: 0
+				left: 15px
 				+tr(opacity 200ms)
 			&:after
 				content: ""
 				position: absolute
-				top: 7px
-				left: 0
+				// top: 7px
+				top: 22px
+				// left: 0
+				left: 15px
 				opacity: 0
 				+tr(opacity 200ms)
 			span
@@ -118,25 +124,29 @@
 				box-shadow: 0 1px 0 #bfdae4
 				+tr(all 200ms)
 			&.freight
-				padding-top: 75px 
+				// padding-top: 75px 
+				padding-top: 90px
 				&:before
 					+s(freight)
 				&:after
 					+s(freight-h)
 			&.flying
-				padding-top: 75px
+				// padding-top: 75px
+				padding-top: 90px
 				&:before
 					+s(flying)
 				&:after
 					+s(flying-h)
 			&.shipping
-				padding-top: 75px
+				// padding-top: 75px
+				padding-top: 90px
 				&:before
 					+s(shipping)
 				&:after
 					+s(shipping-h)
 			&.custom
-				padding-top: 75px
+				// padding-top: 75px
+				padding-top: 90px
 				&:before
 					+s(custom)
 				&:after

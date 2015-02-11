@@ -33,6 +33,7 @@ head.ready(function() {
 	
 	$('.js-drivers').slick({
 		infinite: true,
+    fade: true,
 		arrows: false,
 		slidesToShow: 1,
 		onInit: function(){
@@ -312,10 +313,18 @@ head.ready(function() {
 
     $('.js-hdt-btn').on('click', function(){
       $('.js-hdt').text(text);
+      //val
+      $('.js-hdt-btn-hide').removeClass('is-hide');
+      //
       $(this).hide();
       return false;
     });
-    
+    //val
+    $('.js-hdt-btn-hide').on('click', function() {
+      $('.js-hdt').text(hideText(text, 400));
+      $(this).addClass('is-hide');
+      return false;
+    });
 	// window scroll function
 
 	$(window).scroll(function(){
@@ -323,6 +332,6 @@ head.ready(function() {
 		innerMapFixed();
 		appeareAnimation();
 	});
-	
-
+	//sticky-kit sidebar
+  $(".js-sticky").stick_in_parent({offset_top: 85});
 });
