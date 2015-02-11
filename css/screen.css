@@ -224,7 +224,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .article__left { float: left; width: 55%; }
 .article__right { float: right; width: 33%; }
 .article p { margin-bottom: 20px; }
-.article p i { font-family: "MyriadProIt", Arial, sans-serif; font-style: normal; }
+.article p i { font-family: "MyriadProIt", Arial, sans-serif; font-style: normal !important; font-style: normal; }
 
 .block { position: relative; display: block; height: 444px; text-decoration: none; color: black; padding: 30px 0 0 36px; }
 .block:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 222px; background: white; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
@@ -506,7 +506,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .stats__title { margin-bottom: 10px; color: #83ac00; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; }
 .stats__title span { font-size: 30px; line-height: 1; }
 .stats__title p { font-size: 16px; }
-.stats__text { font-family: "MyriadProIt", Arial, sans-serif; padding-right: 10px; }
+.stats__text { font-family: "MyriadProIt", Arial, sans-serif; font-style: normal !important; padding-right: 10px; }
 
 .benefits__title { height: 444px; padding-top: 130px; }
 .benefits__title .h3 { position: relative; width: 320px; }
@@ -519,7 +519,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .director__img { position: relative; font-size: 0; padding-bottom: 33px; }
 .director__img img { position: relative; width: 100%; left: 36px; }
 .director__about { position: relative; }
-.director__text { position: relative; width: 120%; padding-left: 20%; font-style: italic; font-size: 16px; font-family: "MyriadProIt", Arial, sans-serif; }
+.director__text { position: relative; width: 120%; padding-left: 20%; font-style: italic; font-size: 16px; font-family: "MyriadProIt", Arial, sans-serif; font-style: normal !important; }
 @media only screen and (max-width: 1366px) { .director__text { width: 110%; } }
 @media only screen and (max-width: 1024px) { .director__text { padding-left: 15%; } }
 .director__name { margin-bottom: 30px; padding-top: 215px; font-family: "FarreronsSerifregular", Arial, sans-serif; line-height: 1.2; font-size: 34px; }
@@ -533,7 +533,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 
 .comm { margin-top: 50px; margin-bottom: 80px; border: 6px solid white; text-align: center; padding: 55px 55px 110px 30px; }
 .comm__item { text-align: right; }
-.comm__text { font-family: "MyriadProIt", Arial, sans-serif; font-size: 15px; }
+.comm__text { font-family: "MyriadProIt", Arial, sans-serif; font-style: normal !important; font-size: 15px; }
 .comm__author { font-size: 13px; color: #a3c7d7; }
 
 .requisites { margin-bottom: 40px; }
@@ -627,7 +627,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .cooperation__item { position: relative; }
 .cooperation__number { position: absolute; top: -26px; left: -14px; font-size: 14px; color: rgba(0, 0, 0, 0.15); }
 .cooperation__name { margin-bottom: 10px; text-transform: uppercase; font-size: 12px; font-family: "HelveticaNeueCyrBold", Arial, sans-serif; color: #01729d; }
-.cooperation__text { padding-right: 15px; font-family: "MyriadProIt", Arial, sans-serif; }
+.cooperation__text { padding-right: 15px; font-family: "MyriadProIt", Arial, sans-serif; font-style: normal !important; }
 
 .case { position: relative; margin-bottom: 120px; z-index: 2; }
 .case .h3 { margin-bottom: 30px; }
@@ -649,7 +649,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 
 .calculation { position: relative; padding-top: 50px; min-height: 215px; margin-bottom: 175px; z-index: 2; }
 .calculation .h3 { padding-left: 25%; margin-bottom: 20px; }
-.calculation__text { margin-bottom: 40px; padding-left: 25%; font-family: "MyriadProIt", Arial, sans-serif; }
+.calculation__text { margin-bottom: 40px; padding-left: 25%; font-family: "MyriadProIt", Arial, sans-serif; font-style: normal !important; }
 .calculation__insert { position: relative; -moz-transition: all 300ms; -o-transition: all 300ms; -webkit-transition: all 300ms; transition: all 300ms; }
 .calculation__insert.is-hidden { opacity: 0; -moz-transform: translateY(50px); -ms-transform: translateY(50px); -webkit-transform: translateY(50px); transform: translateY(50px); visibility: hidden; }
 .calculation__left { float: left; }
