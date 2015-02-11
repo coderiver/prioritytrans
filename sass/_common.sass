@@ -82,9 +82,20 @@ p
 		width: 746px 
 .row
 	+clr
+	&.row_up
+		margin-top: -222px 
+		.col
+			float: none
 .col
 	width: 25%
 	float: left
+	&.col_4
+		float: right !important
+	&.col_3
+		margin-left: 50% 
+	&.col_2
+		margin-left: 25% 
+		float: none
 .col2
 	width: 50%
 	float: left
@@ -544,11 +555,11 @@ p
 				&:hover
 					color: rgba(#000, 0.5)
 					
-// article
+// article 
 .article
 	&__title
 		margin-bottom: 20px
-		+myriad-sb
+		+myriad-sb 
 		font-size: 18px
 	&__in
 		+clr
@@ -562,6 +573,7 @@ p
 		margin-bottom: 20px
 		i
 			+myriad-i 
+			font-style: normal 
 		
 // block
 .block
