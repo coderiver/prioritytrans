@@ -720,9 +720,11 @@ p
 
 .animate
 	opacity: 0
-	+tr(opacity 300ms)
+	+tr(all 300ms)
+	+translate(0,100px)
 	&.is-animated
 		opacity: 1 
+		+translate(0,0)
 @for $i from 1 through 20
 	.animate_#{$i}
 		transition-delay: 300ms*$i!important
