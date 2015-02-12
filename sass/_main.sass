@@ -169,33 +169,59 @@
 		text-align: center
 		+r(1366)
 			display: none		
-
+.cloud1
+	position: absolute
+	right: 0
+	top: 0
+	margin-right: 350px
+	+r(1440)
+		margin-right: 250px
+	+r(1200)
+		margin-right: 200px
+	+r(1024)
+		margin-right: 100px	 	
+	&.alt
+		top: -800px 
+.cloud2
+	position: absolute
+	left: 0
+	bottom: -50px
+	margin-left: 500px
+	+r(1440)
+		margin-left: 300px
+	+r(1200)
+		margin-left: 200px
+	+r(1024)
+		margin-left: 100px 	
+	&.alt
+		top: -800px 
+		bottom: auto
 // m-geography
 .m-geography
 	position: relative
 	overflow: hidden
-	.cloud1
-		position: absolute
-		right: 0
-		top: 0
-		margin-right: 350px
-		+r(1440)
-			margin-right: 250px
-		+r(1200)
-			margin-right: 200px
-		+r(1024)
-			margin-right: 100px	 	
-	.cloud2
-		position: absolute
-		left: 0
-		bottom: -50px
-		margin-left: 500px
-		+r(1440)
-			margin-left: 300px
-		+r(1200)
-			margin-left: 200px
-		+r(1024)
-			margin-left: 100px 		 	
+	// .cloud1
+	// 	position: absolute
+	// 	right: 0
+	// 	top: 0
+	// 	margin-right: 350px
+	// 	+r(1440)
+	// 		margin-right: 250px
+	// 	+r(1200)
+	// 		margin-right: 200px
+	// 	+r(1024)
+	// 		margin-right: 100px	 	
+	// .cloud2
+	// 	position: absolute
+	// 	left: 0
+	// 	bottom: -50px
+	// 	margin-left: 500px
+	// 	+r(1440)
+	// 		margin-left: 300px
+	// 	+r(1200)
+	// 		margin-left: 200px
+	// 	+r(1024)
+	// 		margin-left: 100px 		 	
 	&__text
 		width: 380px
 		p
