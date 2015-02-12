@@ -422,6 +422,7 @@ p
 .copyrights
 	float: left
 	padding-top: 33px
+	padding-top: 24px 
 	+h-r
 	font-size: 11px
 	color: #9f9f9f
@@ -431,6 +432,7 @@ p
 	float: right
 	padding-top: 18px
 	margin: 0 -15px 0 0 
+	padding-top: 12px 
 	a
 		+h-r
 		font-size: 11px
@@ -725,6 +727,8 @@ p
 	+translate(0,100px)
 	&.is-animated
 		opacity: 1 
+		+translate(0,0)
+	&.animate_fixed
 		+translate(0,0)
 @for $i from 1 through 20
 	.animate_#{$i}
