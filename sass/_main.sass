@@ -238,9 +238,31 @@
 			width: 338px
 			border: 8px solid transparent
 			+tr(border-color 200ms 600ms)
+			display: none
+		.b
+			width: 0
+			height: 0
+			background: #fff   
+			position: absolute
+			+tr(all 1000ms 600ms)
+		.tr,.tb
+			top: 0
+			left: -48px
+		.br,.bt 
+			bottom: 0
+			right: -46px 
+		.tr,.br
+			height: 8px  
+		.tb,.bt
+			width: 8px 
 		&.is-animated
 			&:before
-				border-color: #fff		 	
+				border-color: #f00	
+				opacity: .4 
+			.tr,.br
+				width: 338px 
+			.tb,.bt
+				height: 100%  	
 	&__about
 		position: relative
 		width: 190%

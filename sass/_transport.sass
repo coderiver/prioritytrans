@@ -24,8 +24,30 @@
     margin-bottom: 20px
     padding: 12px
     border: 2px solid #b8d07d
+    border: 2px solid transparent
+    position: relative
     & > p
         margin-bottom: 0
+    .b
+        width: 0
+        height: 0
+        background: #b8d07d   
+        position: absolute
+        +tr(all 1500ms 1500ms)
+    .tr,.tb
+        top: 0
+        left: 0px
+    .br,.bt 
+        bottom: 0
+        right: -0px 
+    .tr,.br
+        height: 2px  
+        .is-animated &
+            width: 100%
+    .tb,.bt
+        width: 2px
+        .is-animated &
+            height: 100%
 .tr-list
     +clr
     padding-top: 50px
