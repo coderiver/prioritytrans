@@ -21,6 +21,18 @@ head.ready(function() {
 		arrows: false,
 		slidesToShow: 1
 	});
+  
+  $('.js-slick-news').slick({
+    infinite: true,
+    speed: 600,
+    fade: true,
+    arrows: false,
+    dots: true,
+    swipe: false,
+    slidesToShow: 1,
+    slide: 'a'
+  });
+
 
 	$('.js-slick-crls').slick({
 		infinite: true,
@@ -327,6 +339,47 @@ head.ready(function() {
       $(this).addClass('is-hide');
       return false;
     });
+
+// bookblock
+      
+      function bookblock() {
+        $('.bb-bookblock').each( function( i ) {
+          
+          var $bookBlock = $('.bb-bookblock'),
+            $nav = $('.m-news .slick-dots li button'),
+            bb = $bookBlock.bookblock( {
+              speed : 600,
+              shadows : false
+            });
+            
+          // add navigation events
+          $nav.each( function( i ) {
+            $( this ).on( 'click touchstart', function(event) {
+              var $dot = $( this );
+              $nav.removeClass( 'bb-current' );
+              $dot.addClass( 'bb-current' );
+              $bookBlock.bookblock( 'jump', i + 1 );
+              //return false;
+            });
+          });
+          
+          // add swipe events
+          $bookBlock.children().on( {
+            'swipeleft' : function( event ) {
+              $bookBlock.bookblock( 'next' );
+              return false;
+            },
+            'swiperight' : function( event ) {
+              $bookBlock.bookblock( 'prev' );
+              return false;
+            }
+          });
+          
+        });
+      };
+
+  bookblock();
+
 	// window scroll function
 
 	$(window).scroll(function(){

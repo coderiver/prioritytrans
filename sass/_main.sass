@@ -199,29 +199,7 @@
 // m-geography
 .m-geography
 	position: relative
-	overflow: hidden
-	// .cloud1
-	// 	position: absolute
-	// 	right: 0
-	// 	top: 0
-	// 	margin-right: 350px
-	// 	+r(1440)
-	// 		margin-right: 250px
-	// 	+r(1200)
-	// 		margin-right: 200px
-	// 	+r(1024)
-	// 		margin-right: 100px	 	
-	// .cloud2
-	// 	position: absolute
-	// 	left: 0
-	// 	bottom: -50px
-	// 	margin-left: 500px
-	// 	+r(1440)
-	// 		margin-left: 300px
-	// 	+r(1200)
-	// 		margin-left: 200px
-	// 	+r(1024)
-	// 		margin-left: 100px 		 	
+	overflow: hidden		 	
 	&__text
 		width: 380px
 		p
@@ -377,7 +355,11 @@
 .m-news
 	position: relative
 	+r(1024)
-		width: 60% 
+		width: 60%
+	.slick-dots
+		bottom: -76px
+		left: -122px
+		z-index: 101 
 	&__date
 		position: relative 
 		height: 294px
@@ -420,7 +402,7 @@
 	&__article
 		position: relative
 		display: block
-		height: 294px
+		height: 294px!important
 		padding: 50px 0 0 36px
 		text-decoration: none
 		color: #000  
