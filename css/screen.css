@@ -428,6 +428,10 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 @media only screen and (max-width: 1024px) { .m-news { width: 60%; } }
 .m-news .slick-dots { bottom: -76px; left: -122px; z-index: 101; }
 .m-news__date { position: relative; height: 294px; margin-top: 97px; }
+.m-news__date.animate { -moz-transform: translate(0, -100px); -ms-transform: translate(0, -100px); -webkit-transform: translate(0, -100px); transform: translate(0, -100px); }
+.m-news__date.animate.is-animated { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+.m-news__text.animate { -moz-transform: translate(100px, 0); -ms-transform: translate(100px, 0); -webkit-transform: translate(100px, 0); transform: translate(100px, 0); }
+.m-news__text.animate.is-animated { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
 .m-news__date-img { position: absolute; top: 0; bottom: 0; right: 0; left: 0; font-size: 0; }
 .m-news__date-img img { width: 100%; height: 100%; }
 .m-news__date-img:before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 101, 150, 0.9); z-index: 1; }
@@ -455,6 +459,8 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .m-articles__text { line-height: 1.7; }
 
 .m-form { position: relative; top: -100px; width: 492px; margin: 0 auto; text-align: center; -moz-perspective: 800px; -webkit-perspective: 800px; perspective: 800px; z-index: 2; }
+.m-form.animate { -moz-transform: translate(-100px, 0); -ms-transform: translate(-100px, 0); -webkit-transform: translate(-100px, 0); transform: translate(-100px, 0); }
+.m-form.animate.is-animated { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
 .m-form__in { position: relative; min-height: 58px; -moz-transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -moz-transition: all 400ms; -o-transition: all 400ms; -webkit-transition: all 400ms; transition: all 400ms; }
 .m-form__in.is-open { min-height: 555px; -moz-transform: rotateX(180deg); -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
 .m-form__in.is-open.is-success { min-height: 324px; }

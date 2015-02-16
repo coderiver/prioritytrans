@@ -385,6 +385,15 @@
 		position: relative 
 		height: 294px
 		margin-top: 97px
+		&.animate
+			+translate(0,-100px)
+			&.is-animated
+				+translate(0,0)
+	&__text
+		&.animate
+			+translate(100px,0)
+			&.is-animated
+				+translate(0,0)			
 	&__date-img
 		position: absolute
 		top: 0
@@ -505,6 +514,10 @@
 	text-align: center
 	+perspective(800px)
 	z-index: 2
+	&.animate
+		+translate(-100px,0)
+		&.is-animated
+			+translate(0,0)
 	&__in
 		position: relative
 		min-height: 58px
