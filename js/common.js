@@ -1,5 +1,9 @@
 head.ready(function() {
 
+  $(document).click(function(){
+    $('.js-calc-list').removeClass('is-open');
+  });
+
 	$('.js-menu').on('click', function(){
 		$('.menu-btn').toggleClass('is-open');
     $('.js-menu-btn-text').toggleClass('is-open');
@@ -225,23 +229,27 @@ head.ready(function() {
       });
 
   		// input change events
-  		$('.js-calc-block').each(function(){
-  			var item = $(this);
-  			item.find('.js-calc-input').on('input', function(){
-  				item.find('.js-calc-reset').addClass('is-active');
-  				item.find('.js-calc-list').addClass('is-open');
+  			var item = $('.js-calc-block');
+  			
+        item.find('.js-calc-input').on('input', function(event){
+  				$(this).parent().find('.js-calc-reset').addClass('is-active');
   				if ($(this).val().length == 0) {
-  					item.find('.js-calc-reset').removeClass('is-active');
-  					item.find('.js-calc-list').removeClass('is-open');
+  					$(this).parent().find('.js-calc-reset').removeClass('is-active');
   				};
+          event.stopPropagation();
   			});
-  			item.find('.js-calc-reset').on('click', function(){
+        
+        item.find('.js-calc-input').on('click', function(event){
+          $('.js-calc-list').removeClass('is-open');
+          $(this).parent().find('.js-calc-list').addClass('is-open');
+          event.stopPropagation();
+        });
+
+  			$('.js-calc-reset').on('click', function(){
   				$(this).prev().val('');
-  				$(this).next().removeClass('is-open');
   				$(this).removeClass('is-active');
   			});
-  		});
-
+      
   		// result button
   		$('.js-calc-sbmt').on('click', function(){
   			$('.js-calc-insert').addClass('is-hidden');
