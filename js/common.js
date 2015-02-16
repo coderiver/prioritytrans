@@ -102,13 +102,14 @@ head.ready(function() {
 				form : form_this,
 				validateOnBlur : false,
 				borderColorOnError : false,
+        scrollToTopOnError : false,
 				onSuccess : function() {
       				$('.js-step1').addClass('is-hidden');
       				$('.js-step2').removeClass('is-hidden');
       				$('.js-form').addClass('is-success');
       				$('.js-form-back').addClass('is-success');
       				return false;
-    			}
+    			} 
 			});
 		});
 	};
