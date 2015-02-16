@@ -361,13 +361,13 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .topper__down { text-align: center; }
 @media only screen and (max-width: 1366px) { .topper__down { display: none; } }
 
-.cloud1 { position: absolute; right: 0; top: 0; margin-right: 350px; }
+.cloud1 { position: absolute; right: 0; top: 0; margin-right: 350px; z-index: 2; }
 @media only screen and (max-width: 1440px) { .cloud1 { margin-right: 250px; } }
 @media only screen and (max-width: 1200px) { .cloud1 { margin-right: 200px; } }
 @media only screen and (max-width: 1024px) { .cloud1 { margin-right: 100px; } }
 .cloud1.alt { top: -800px; }
 
-.cloud2 { position: absolute; left: 0; bottom: -50px; margin-left: 500px; }
+.cloud2 { position: absolute; left: 0; bottom: -50px; margin-left: 500px; z-index: 2; }
 @media only screen and (max-width: 1440px) { .cloud2 { margin-left: 300px; } }
 @media only screen and (max-width: 1200px) { .cloud2 { margin-left: 200px; } }
 @media only screen and (max-width: 1024px) { .cloud2 { margin-left: 100px; } }
