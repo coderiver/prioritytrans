@@ -5,17 +5,25 @@
     +cover
     background-attachment: fixed
 
+.about
+    &.animate
+        +translate(0,0)
+    .article
+        &.animate
+            +translate(100px,0)
+            &.is-animated
+                +translate(0,0)
 .stats
     padding: 75px 0 50px
-    +rh(650)
-        .animate_6
-            transition-delay: 300ms!important
-        .animate_7
-            transition-delay: 600ms!important
-        .animate_8
-            transition-delay: 900ms!important
-        .animate_9
-            transition-delay: 1200ms!important             
+    .col
+        &.animate.animate_1
+            +translate(-50px,100px)
+            &.is-animated
+                +translate(0,0)
+        &.animate.animate_4
+            +translate(50px,100px)
+            &.is-animated
+                +translate(0,0)        
     &__title
         margin-bottom: 10px
         color: #83ac00
@@ -40,7 +48,6 @@
         .block
             &:before
                 background: #e0eef3
-
 // director
 .director
     position: relative

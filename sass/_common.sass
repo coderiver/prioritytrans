@@ -50,7 +50,9 @@ p
 .container
 	position: relative
 	padding-top: 84px
-	z-index: 1 
+	z-index: 1
+	&.animate
+		+translate(0,0)	 
 .center
 	position: relative
 	max-width: 980px
@@ -282,6 +284,8 @@ p
 		+tr(width 200ms 900ms)
 		height: 2px
 		background: #187ea6
+	&.animate
+		+translate(0,0)	
 	&.is-animated
 		&:after
 			width: 135px 	
@@ -652,7 +656,7 @@ p
 		right: 0
 		height: 222px
 		background: #FFF
-		+tr(background 200ms)		 		 
+		+tr(background 200ms)
 	p
 		position: relative
 		line-height: 1.6
@@ -725,6 +729,10 @@ p
 	opacity: 0
 	+tr(all 300ms) 
 	+translate(0,100px)
+	&.to-left
+		+translate(100px,0)
+	&.to-right
+		+translate(-100px,0)	
 	&.is-animated
 		opacity: 1 
 		+translate(0,0)

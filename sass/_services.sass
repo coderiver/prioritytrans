@@ -8,15 +8,14 @@
 	padding: 100px 0 120px 
 	z-index: 2
 	.col
-		+rh(650)
-			&.animate_6
-				transition-delay: 300ms!important
-			&.animate_7
-				transition-delay: 600ms!important
-			&.animate_8
-				transition-delay: 900ms!important
-			&.animate_9
-				transition-delay: 1200ms!important		
+		&.animate_1
+			+translate(-100px,100px)
+			&.is-animated
+				+translate(0,0)
+		&.animate_4
+			+translate(100px,100px)
+			&.is-animated
+				+translate(0,0)	
 	&__item
 		position: relative
 		padding-left: 37px
