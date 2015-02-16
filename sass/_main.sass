@@ -250,7 +250,7 @@
 			height: 0
 			background: #fff   
 			position: absolute
-			+tr(all 1000ms 600ms)
+			+tr(all 1000ms 1400ms)
 		.tr,.tb
 			top: 0
 			left: -48px
@@ -260,7 +260,12 @@
 		.tr,.br
 			height: 8px  
 		.tb,.bt
-			width: 8px 
+			width: 8px
+		&.animate
+			+tr(all 400ms) 
+			+translate(-50px,150px)
+			&.is-animated
+				+translate(0,0)	 
 		&.is-animated
 			&:before
 				border-color: #f00	
@@ -305,9 +310,20 @@
 			.m-company__number
 				color: #9ebd2b
 			.m-company__title
-				color: #000		 	
+				color: #000
+		&.animate
+			+tr(all 400ms) 					 	
 		&.first
-			margin-top: 222px	 
+			margin-top: 222px
+			&.animate
+				+translate(50px,30px)
+				&.is-animated
+					+translate(0,0)
+		&.last
+			&.animate
+				+translate(-50px,30px)
+				&.is-animated
+					+translate(0,0)					 
 		& > p
 			position: relative
 			line-height: 1.6 
@@ -347,9 +363,12 @@
 			font-style: normal
 			color: #006596
 			text-align: left
-			
 			&:hover
 				text-decoration: none
+		&.animate
+			+translate(100px,0)
+			&.is-animated
+				+translate(0,0)		
 
 .m-media
 	position: relative
