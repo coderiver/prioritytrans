@@ -201,7 +201,9 @@
 // m-geography
 .m-geography
 	position: relative
-	overflow: hidden		 	
+	overflow: hidden
+	&.animate
+		+translate(0,0)			 	
 	&__text
 		width: 380px
 		p
@@ -212,10 +214,8 @@
 		.btn
 			width: 25%
 			padding: 0
-			text-align: center  
-.geoblock
-	// background: red 
-		
+			text-align: center
+
 // m-company
 .m-company
 	margin-bottom: 80px
