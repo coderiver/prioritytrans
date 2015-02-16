@@ -62,7 +62,15 @@
 .topper
 	margin-top: 7%
 	padding-bottom: 200px
-	
+	.col
+		&.animate_5
+			+translate(-100px,100px)
+			&.is-animated
+				+translate(0,0)
+		&.animate_8
+			+translate(100px,100px)
+			&.is-animated
+				+translate(0,0)		
 	.center__wrap
 		background: url(../img/img1.jpg) 100% 0 no-repeat
 		+rh(860)
@@ -110,17 +118,13 @@
 			&:before
 				content: ""
 				position: absolute
-				// top: 7px
 				top: 22px
-				// left: 0
 				left: 15px
 				+tr(opacity 200ms)
 			&:after
 				content: ""
 				position: absolute
-				// top: 7px
 				top: 22px
-				// left: 0
 				left: 15px
 				opacity: 0
 				+tr(opacity 200ms)
@@ -129,29 +133,25 @@
 				padding-bottom: 4px 
 				box-shadow: 0 1px 0 #bfdae4
 				+tr(all 200ms)
-			&.freight
-				// padding-top: 75px 
+			&.freight 
 				padding-top: 90px
 				&:before
 					+s(freight)
 				&:after
 					+s(freight-h)
 			&.flying
-				// padding-top: 75px
 				padding-top: 90px
 				&:before
 					+s(flying)
 				&:after
 					+s(flying-h)
 			&.shipping
-				// padding-top: 75px
 				padding-top: 90px
 				&:before
 					+s(shipping)
 				&:after
 					+s(shipping-h)
 			&.custom
-				// padding-top: 75px
 				padding-top: 90px
 				&:before
 					+s(custom)
