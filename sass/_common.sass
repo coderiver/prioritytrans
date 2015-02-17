@@ -542,7 +542,12 @@ p
 		text-align: left
 		margin: 0 50px
 		.h4
+			display: inline-block
 			margin-bottom: 40px
+			text-decoration: none
+			+tr(color 200ms)
+			&:hover
+				color: rgba(#006596, 0.7)
 	&__list
 		font-size: 11px
 		text-transform: uppercase

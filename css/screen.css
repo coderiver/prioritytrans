@@ -179,7 +179,8 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 
 .menu { text-align: center; }
 .menu__item { display: inline-block; vertical-align: top; text-align: left; margin: 0 50px; }
-.menu__item .h4 { margin-bottom: 40px; }
+.menu__item .h4 { display: inline-block; margin-bottom: 40px; text-decoration: none; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.menu__item .h4:hover { color: rgba(0, 101, 150, 0.7); }
 .menu__list { font-size: 11px; text-transform: uppercase; }
 .menu__list > li { margin-bottom: 15px; }
 .menu__list a { text-decoration: none; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; letter-spacing: 1px; color: rgba(0, 101, 150, 0.5); -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
