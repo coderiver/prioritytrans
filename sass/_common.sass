@@ -42,7 +42,7 @@ body
 	letter-spacing: 0.49px 
 	background: #eef4f6 
 p
-	letter-spacing: 0.05em 
+	letter-spacing: 0.49px 
 	line-height: 24px
 =ls
 	letter-spacing: 1px 	
@@ -304,9 +304,10 @@ p
 	position: fixed
 	background: rgba(#fff, .9)
 	+clr
-	z-index: 3
+	z-index: 10
 	opacity: 0
 	+tr(opacity 200ms)
+	+gpu
 	&.is-animated
 		opacity: 1 
 	&.box_top
@@ -356,7 +357,7 @@ p
 		+h-r
 		color: #9f9f9f
 		text-decoration: none
-		letter-spacing: 2px
+		letter-spacing: 0.49px
 		+tr(color 200ms)
 		&:hover
 			color: #000
@@ -372,6 +373,7 @@ p
 		+h-r
 		font-size: 11px
 		color: #9f9f9f
+		letter-spacing: 0.49px
 		text-transform: uppercase
 		+ls
 		opacity: 0 
@@ -579,7 +581,7 @@ p
 			color: rgba(#006595, .5)
 			+transition(color 200ms, box-shadow 200ms)
 			&:hover, &.is-active
-				color: #006595
+				color: #83ac00
 				box-shadow: 0 1px 0 transparent
 			&:before
 				content: ' '

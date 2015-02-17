@@ -142,12 +142,13 @@
             bottom: -15px
             background: #fff
             opacity: 0
+            will-change: opacity
             +tr(opacity 200ms)
         &:hover
             &:before
                 opacity: 1
             .articles__title
-                color: #000                                      
+                color: #9ebd2b                                      
     &__img
         position: relative 
         font-size: 0
@@ -172,6 +173,7 @@
         z-index: 2
     &__text
         color: #000
-        margin-bottom: 20px          
+        margin-bottom: 20px
+        +gpu
 
                                
