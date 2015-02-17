@@ -134,12 +134,12 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .phone a:hover { color: #000; }
 
 .menu-left { position: relative; display: inline-block; vertical-align: middle; padding-top: 20px; }
-.menu-left__btn, .menu-left__btn-close { position: absolute; top: 0; left: 0; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; opacity: 0; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; will-change: translateY; }
+.menu-left__btn, .menu-left__btn-close { position: absolute; top: 0; left: 0; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; opacity: 0; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; will-change: translate; }
 .menu-left__btn.is-open, .menu-left__btn-close.is-open { opacity: 1; }
-.menu-left__btn { -moz-transform: rotate(-90deg) translateY(-20px); -ms-transform: rotate(-90deg) translateY(-20px); -webkit-transform: rotate(-90deg) translateY(-20px); transform: rotate(-90deg) translateY(-20px); }
-.menu-left__btn.is-open { -moz-transform: rotate(-90deg) translateY(-2px); -ms-transform: rotate(-90deg) translateY(-2px); -webkit-transform: rotate(-90deg) translateY(-2px); transform: rotate(-90deg) translateY(-2px); }
-.menu-left__btn-close { -moz-transform: rotate(-90deg) translateY(20px); -ms-transform: rotate(-90deg) translateY(20px); -webkit-transform: rotate(-90deg) translateY(20px); transform: rotate(-90deg) translateY(20px); }
-.menu-left__btn-close.is-open { -moz-transform: rotate(-90deg) translateY(-13px); -ms-transform: rotate(-90deg) translateY(-13px); -webkit-transform: rotate(-90deg) translateY(-13px); transform: rotate(-90deg) translateY(-13px); }
+.menu-left__btn { -moz-transform: rotate(-90deg) translate(-10px, -20px); -ms-transform: rotate(-90deg) translate(-10px, -20px); -webkit-transform: rotate(-90deg) translate(-10px, -20px); transform: rotate(-90deg) translate(-10px, -20px); }
+.menu-left__btn.is-open { -moz-transform: rotate(-90deg) translate(-10px, -2px); -ms-transform: rotate(-90deg) translate(-10px, -2px); -webkit-transform: rotate(-90deg) translate(-10px, -2px); transform: rotate(-90deg) translate(-10px, -2px); }
+.menu-left__btn-close { -moz-transform: rotate(-90deg) translate(0, 20px); -ms-transform: rotate(-90deg) translate(0, 20px); -webkit-transform: rotate(-90deg) translate(0, 20px); transform: rotate(-90deg) translate(0, 20px); }
+.menu-left__btn-close.is-open { -moz-transform: rotate(-90deg) translate(0, -13px); -ms-transform: rotate(-90deg) translate(0, -13px); -webkit-transform: rotate(-90deg) translate(0, -13px); transform: rotate(-90deg) translate(0, -13px); }
 
 .menu-btn { position: relative; display: inline-block; margin-top: 30px; vertical-align: middle; background: transparent; height: 20px; font-size: 0; }
 .menu-btn span { display: inline-block; width: 33px; height: 2px; background: #01719d; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
@@ -377,13 +377,15 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 @media only screen and (max-width: 1440px) { .cloud1 { margin-right: 250px; } }
 @media only screen and (max-width: 1200px) { .cloud1 { margin-right: 200px; } }
 @media only screen and (max-width: 1024px) { .cloud1 { margin-right: 100px; } }
-.cloud1.alt { top: -800px; }
+.cloud1.alt { top: -600px; }
 
-.cloud2 { position: absolute; left: 0; bottom: -50px; margin-left: 500px; z-index: 2; }
+.cloud2 { position: absolute; left: 0; bottom: -50px; margin-left: 400px; z-index: 2; }
 @media only screen and (max-width: 1440px) { .cloud2 { margin-left: 300px; } }
 @media only screen and (max-width: 1200px) { .cloud2 { margin-left: 200px; } }
 @media only screen and (max-width: 1024px) { .cloud2 { margin-left: 100px; } }
 .cloud2.alt { top: -800px; bottom: auto; }
+
+.cloud3 { position: absolute; right: 0; top: -1445px; z-index: 2; }
 
 .m-geography { position: relative; overflow: hidden; }
 .m-geography.animate { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
@@ -606,7 +608,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 
 .inner-map { overflow: hidden; position: relative; top: -529px; padding-top: 329px; margin-bottom: -929px; z-index: 1; }
 .inner-map.is-fixed { position: fixed; top: -625px; }
-.inner-map__draggable { position: relative; height: 1400px; cursor: url(../img/cursor.png), default; }
+.inner-map__draggable { position: relative; height: 1400px; cursor: move; }
 .inner-map__img { position: relative; width: 2000px; }
 .inner-map__img img { width: 100%; }
 .inner-map__route { position: absolute; top: 610px; left: 240px; }

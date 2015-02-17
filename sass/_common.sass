@@ -376,17 +376,17 @@ p
 		+ls
 		opacity: 0 
 		+tr(all 200ms)
-		will-change: translateY
+		will-change: translate
 		&.is-open
 			opacity: 1
 	&__btn
-		+transform(rotate(-90deg) translateY(-20px))
+		+transform(rotate(-90deg) translate(-10px, -20px))
 		&.is-open
-			+transform(rotate(-90deg) translateY(-2px))		
+			+transform(rotate(-90deg) translate(-10px, -2px))		
 	&__btn-close
-		+transform(rotate(-90deg) translateY(20px))
+		+transform(rotate(-90deg) translate(0, 20px))
 		&.is-open
-			+transform(rotate(-90deg) translateY(-13px))		  		
+			+transform(rotate(-90deg) translate(0, -13px))		  		
 .menu-btn
 	position: relative
 	display: inline-block
