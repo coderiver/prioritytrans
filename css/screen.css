@@ -413,7 +413,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .m-company__main.is-animated .tb, .m-company__main.is-animated .bt { height: 100%; }
 .m-company__about { position: relative; width: 190%; font-family: "MyriadProSemibold", Arial, sans-serif; margin-bottom: 90px; z-index: 2; }
 .m-company__distance { margin-bottom: 90px; color: #3181a9; opacity: 0.5; }
-.m-company__distance span { font-size: 14px; font-style: italic; }
+.m-company__distance span { display: inline-block; margin-bottom: 5px; font-size: 14px; font-style: italic; }
 .m-company__distance p { font-size: 36px; font-family: "HelveticaNeueCyrThin", Arial, sans-serif; }
 .m-company__col { position: relative; display: block; text-decoration: none; color: #000; padding: 30px 0 0 36px; }
 .m-company__col:before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 222px; background: #FFF; -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
@@ -631,7 +631,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .g-point__bg img { width: 100%; min-height: 222px; }
 .g-point__title { position: relative; padding-bottom: 20px; margin-bottom: 25px; color: #116f9d; font-size: 18px; }
 .g-point__title:before { content: ""; position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: #9ebd2b; }
-.g-point__text { position: relative; }
+.g-point__text { position: relative; line-height: 1.6; }
 
 .unchor { position: relative; display: inline-block; background: url('../img/icons-s6cd2ac9411.png') 0 -849px no-repeat; width: 22px; height: 30px; }
 
