@@ -278,29 +278,6 @@
         +ls
         text-transform: uppercase
         color: rgba(#000, 0.5)
-    &__input
-        position: relative
-        display: block
-        input
-            width: 100%
-            height: 42px
-            background: #d6e9f0
-            padding: 0 14px
-            +h-l
-            text-transform: uppercase
-            font-size: 12px
-            color: rgba(#000, 0.7)
-        .reset
-            visibility: hidden
-            opacity: 0 
-            position: absolute
-            top: 50%
-            right: 12px
-            margin-top: -5px
-            +tr(opacity 200ms)
-            &.is-active
-                opacity: 1
-                visibility: visible 
     &__add
         padding-left: 338px
         padding-top: 10px
@@ -323,30 +300,6 @@
             left: -12px
         &:hover
             border-color: transparent
-    &__autocomplete
-        display: none
-        position: absolute
-        top: 42px
-        left: 0
-        right: 0
-        padding: 15px 
-        background: #fff 
-        border: 1px solid #e0ebef             
-        z-index: 3
-        &.is-open
-            display: block
-        li
-            margin-bottom: 10px
-        a
-            display: inline-block
-            font-size: 12px 
-            text-decoration: none
-            text-transform: uppercase
-            +ls
-            color: rgba(#000, 0.7)
-            +tr(color 200ms)
-            &:hover
-                color: rgba(#006596, 0.7)
     &__result
         position: absolute
         top: 200px
@@ -376,4 +329,4 @@
         font-size: 30px
         color: #88af00     
     &__restart-btn
-        +s(refresh)    
+        +s(refresh)

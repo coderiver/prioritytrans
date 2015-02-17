@@ -389,6 +389,14 @@ head.ready(function() {
 
   bookblock();
 
+  // chosen select
+
+  $('.chosen-select').chosen({
+    width: '100%',
+    max_selected_options: 1,
+    no_results_text: "Не найдено"
+  });
+
 	// window scroll function
 
 	$(window).scroll(function(){
