@@ -6,10 +6,15 @@ head.ready(function() {
 
 	$('.js-menu').on('click', function(){
 		$('.menu-btn').toggleClass('is-open');
-    $('.js-menu-btn-text').toggleClass('is-open');
+    //$('.js-menu-btn-text').toggleClass('is-open');
+    $(this).toggleClass('is-open');
+    $('.js-menu-btn-text').fadeIn(200);
+    $('.js-menu-btn-text-close').fadeOut(200);
 		$('.js-nav').toggleClass('is-open');
-    if($('.js-menu-btn-text').hasClass('is-open')){
-      $('.js-menu-btn-text').text('закрыть');
+    if($('.js-menu').hasClass('is-open')){
+      //$('.js-menu-btn-text').text('закрыть');
+      $('.js-menu-btn-text-close').fadeIn(200);
+      $('.js-menu-btn-text').fadeOut(200);
     }
     else {
       $('.js-menu-btn-text').text('меню');

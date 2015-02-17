@@ -37,7 +37,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 @font-face { font-family: FarreronsSerifItalic; src: url("fonts/FarreronsSerifItalic.eot"); src: url("fonts/FarreronsSerifItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifItalic.woff2") format("woff2"), url("fonts/FarreronsSerifItalic.woff") format("woff"), url("fonts/FarreronsSerifItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: FarreronsSerifThinItalic; src: url("fonts/FarreronsSerifThinItalic.eot"); src: url("fonts/FarreronsSerifThinItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifThinItalic.woff2") format("woff2"), url("fonts/FarreronsSerifThinItalic.woff") format("woff"), url("fonts/FarreronsSerifThinItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: FarreronsSerifLightItalic; src: url("fonts/FarreronsSerifLightItalic.eot"); src: url("fonts/FarreronsSerifLightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/FarreronsSerifLightItalic.woff2") format("woff2"), url("fonts/FarreronsSerifLightItalic.woff") format("woff"), url("fonts/FarreronsSerifLightItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; font-size: 14px; line-height: 1.4; background: #eef4f6; }
+body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; font-size: 14px; line-height: 1.4; letter-spacing: 0.49px; background: #eef4f6; }
 
 p { letter-spacing: 0.05em; line-height: 24px; }
 
@@ -462,10 +462,11 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .m-articles__list { position: relative; padding-top: 34px; }
 .m-articles__list > li { margin-bottom: 30px; }
 .m-articles__list > li > a { display: block; text-decoration: none; }
+.m-articles__list > li > a:hover .m-articles__text { color: #9ebd2b; }
 .m-articles__date { margin-bottom: 15px; color: rgba(0, 0, 0, 0.5); font-size: 10px; text-transform: uppercase; font-family: "HelveticaNeueCyrLight", Arial, sans-serif; letter-spacing: 1px; }
 .m-articles__more { padding: 40px 68px 60px 0; text-align: right; }
 @media only screen and (max-width: 1024px) { .m-articles__more { padding: 40px 0 60px 0; } }
-.m-articles__text { line-height: 1.7; }
+.m-articles__text { line-height: 1.7; color: #000; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 
 .m-form { position: relative; top: -100px; width: 492px; margin: 0 auto; text-align: center; -moz-perspective: 800px; -webkit-perspective: 800px; perspective: 800px; z-index: 2; }
 .m-form.animate { -moz-transform: translate(-100px, 0); -ms-transform: translate(-100px, 0); -webkit-transform: translate(-100px, 0); transform: translate(-100px, 0); }
@@ -601,7 +602,7 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 
 .inner-map { overflow: hidden; position: relative; top: -529px; padding-top: 329px; margin-bottom: -929px; z-index: 1; }
 .inner-map.is-fixed { position: fixed; top: -625px; }
-.inner-map__draggable { position: relative; height: 1400px; }
+.inner-map__draggable { position: relative; height: 1400px; cursor: url(../img/cursor.png), default; }
 .inner-map__img { position: relative; width: 2000px; }
 .inner-map__img img { width: 100%; }
 .inner-map__route { position: absolute; top: 610px; left: 240px; }

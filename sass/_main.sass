@@ -490,6 +490,9 @@
 			& > a
 				display: block
 				text-decoration: none
+				&:hover
+					.m-articles__text
+						color: #9ebd2b
 	&__date
 		margin-bottom: 15px
 		color: rgba(#000, .5)
@@ -503,7 +506,9 @@
 		+r(1024)
 			padding: 40px 0 60px 0 
 	&__text
-		line-height: 1.7	
+		line-height: 1.7
+		color: #000
+		+tr(color 200ms)	
 		
 // m-form
 .m-form
