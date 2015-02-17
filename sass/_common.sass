@@ -374,12 +374,17 @@ p
 		color: #9f9f9f
 		text-transform: uppercase
 		+ls
-		+transform(rotate(-90deg) translateY(-60px))
+		opacity: 0 
 		+tr(all 200ms)
+		will-change: translateY
 		&.is-open
 			opacity: 1
-			+transform(rotate(-90deg) translateY(-2px))
+	&__btn
+		+transform(rotate(-90deg) translateY(-20px))
+		&.is-open
+			+transform(rotate(-90deg) translateY(-2px))		
 	&__btn-close
+		+transform(rotate(-90deg) translateY(20px))
 		&.is-open
 			+transform(rotate(-90deg) translateY(-13px))		  		
 .menu-btn

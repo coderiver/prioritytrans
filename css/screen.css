@@ -134,8 +134,11 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .phone a:hover { color: #000; }
 
 .menu-left { position: relative; display: inline-block; vertical-align: middle; padding-top: 20px; }
-.menu-left__btn, .menu-left__btn-close { position: absolute; top: 0; left: 0; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; -moz-transform: rotate(-90deg) translateY(-60px); -ms-transform: rotate(-90deg) translateY(-60px); -webkit-transform: rotate(-90deg) translateY(-60px); transform: rotate(-90deg) translateY(-60px); -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
-.menu-left__btn.is-open, .menu-left__btn-close.is-open { opacity: 1; -moz-transform: rotate(-90deg) translateY(-2px); -ms-transform: rotate(-90deg) translateY(-2px); -webkit-transform: rotate(-90deg) translateY(-2px); transform: rotate(-90deg) translateY(-2px); }
+.menu-left__btn, .menu-left__btn-close { position: absolute; top: 0; left: 0; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; opacity: 0; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; will-change: translateY; }
+.menu-left__btn.is-open, .menu-left__btn-close.is-open { opacity: 1; }
+.menu-left__btn { -moz-transform: rotate(-90deg) translateY(-20px); -ms-transform: rotate(-90deg) translateY(-20px); -webkit-transform: rotate(-90deg) translateY(-20px); transform: rotate(-90deg) translateY(-20px); }
+.menu-left__btn.is-open { -moz-transform: rotate(-90deg) translateY(-2px); -ms-transform: rotate(-90deg) translateY(-2px); -webkit-transform: rotate(-90deg) translateY(-2px); transform: rotate(-90deg) translateY(-2px); }
+.menu-left__btn-close { -moz-transform: rotate(-90deg) translateY(20px); -ms-transform: rotate(-90deg) translateY(20px); -webkit-transform: rotate(-90deg) translateY(20px); transform: rotate(-90deg) translateY(20px); }
 .menu-left__btn-close.is-open { -moz-transform: rotate(-90deg) translateY(-13px); -ms-transform: rotate(-90deg) translateY(-13px); -webkit-transform: rotate(-90deg) translateY(-13px); transform: rotate(-90deg) translateY(-13px); }
 
 .menu-btn { position: relative; display: inline-block; margin-top: 30px; vertical-align: middle; background: transparent; height: 20px; font-size: 0; }
