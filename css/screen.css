@@ -133,9 +133,10 @@ p { letter-spacing: 0.05em; line-height: 24px; }
 .phone a { font-size: 12px; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; color: #9f9f9f; text-decoration: none; letter-spacing: 2px; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 .phone a:hover { color: #000; }
 
-.menu-left { display: inline-block; vertical-align: middle; }
-.menu-left__btn { display: block; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
-.menu-left .menu-left__btn.is-open { margin-bottom: 18px; }
+.menu-left { position: relative; display: inline-block; vertical-align: middle; padding-top: 20px; }
+.menu-left__btn, .menu-left__btn-close { position: absolute; top: 0; left: 0; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; font-size: 11px; color: #9f9f9f; text-transform: uppercase; letter-spacing: 1px; -moz-transform: rotate(-90deg) translateY(-60px); -ms-transform: rotate(-90deg) translateY(-60px); -webkit-transform: rotate(-90deg) translateY(-60px); transform: rotate(-90deg) translateY(-60px); -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
+.menu-left__btn.is-open, .menu-left__btn-close.is-open { opacity: 1; -moz-transform: rotate(-90deg) translateY(-2px); -ms-transform: rotate(-90deg) translateY(-2px); -webkit-transform: rotate(-90deg) translateY(-2px); transform: rotate(-90deg) translateY(-2px); }
+.menu-left__btn-close.is-open { -moz-transform: rotate(-90deg) translateY(-13px); -ms-transform: rotate(-90deg) translateY(-13px); -webkit-transform: rotate(-90deg) translateY(-13px); transform: rotate(-90deg) translateY(-13px); }
 
 .menu-btn { position: relative; display: inline-block; margin-top: 30px; vertical-align: middle; background: transparent; height: 20px; font-size: 0; }
 .menu-btn span { display: inline-block; width: 33px; height: 2px; background: #01719d; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }

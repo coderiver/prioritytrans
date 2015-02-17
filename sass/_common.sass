@@ -361,18 +361,27 @@ p
 		&:hover
 			color: #000
 .menu-left
+	position: relative 
 	display: inline-block
 	vertical-align: middle
-	&__btn
-		display: block
+	padding-top: 20px
+	&__btn, &__btn-close
+		position: absolute
+		top: 0
+		left: 0 
 		+h-r
 		font-size: 11px
 		color: #9f9f9f
 		text-transform: uppercase
 		+ls
-		+transform(rotate(-90deg))	
-	.menu-left__btn.is-open
-		margin-bottom: 18px 		
+		+transform(rotate(-90deg) translateY(-60px))
+		+tr(all 200ms)
+		&.is-open
+			opacity: 1
+			+transform(rotate(-90deg) translateY(-2px))
+	&__btn-close
+		&.is-open
+			+transform(rotate(-90deg) translateY(-13px))		  		
 .menu-btn
 	position: relative
 	display: inline-block
