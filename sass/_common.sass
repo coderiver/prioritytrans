@@ -355,6 +355,7 @@ p
 	a
 		font-size: 12px
 		+h-r
+		letter-spacing: 2px
 		color: #9f9f9f
 		text-decoration: none
 		letter-spacing: 0.49px
@@ -373,7 +374,7 @@ p
 		+h-r
 		font-size: 11px
 		color: #9f9f9f
-		letter-spacing: 0.49px
+		letter-spacing: 2px
 		text-transform: uppercase
 		+ls
 		opacity: 0 
@@ -384,18 +385,19 @@ p
 	&__btn
 		+transform(rotate(-90deg) translate(-10px, -20px))
 		&.is-open
-			+transform(rotate(-90deg) translate(-10px, -2px))		
+			+transform(rotate(-90deg) translate(-10px, 5px))		
 	&__btn-close
 		+transform(rotate(-90deg) translate(0, 20px))
 		&.is-open
-			+transform(rotate(-90deg) translate(0, -13px))		  		
+			+transform(rotate(-90deg) translate(0, -4px))		  		
 .menu-btn
 	position: relative
 	display: inline-block
 	margin-top: 30px
 	vertical-align: middle
 	background: transparent
-	height: 20px
+	height: 40px
+	padding: 10px 
 	font-size: 0 
 	span
 		display: inline-block
@@ -406,9 +408,9 @@ p
 	&:before
 		content: ""
 		position: absolute
-		top: 0px
-		left: 0
-		right: 0
+		top: 10px
+		left: 10px
+		right: 10px
 		height: 2px 		
 		background: #01719d
 		+gpu
@@ -416,39 +418,40 @@ p
 	&:after
 		content: ""
 		position: absolute
-		top: 18px
-		left: 0
-		right: 0
+		top: 28px
+		left: 10px
+		right: 10px
 		height: 2px
 		background: #01719d
 		+gpu
 		+tr(all 200ms)
 	&:hover
 		&:before
-			top: -2px
+			top: 6px
 		&:after
-			top: 20px	  	
+			top: 32px	  	
 	&.is-open
 		left: -4px
 		span
 			opacity: 0
 		&:before
-			top: 10px
+			top: 16px
 			width: 40px
 			+transform(rotate(45deg))
 		&:after
-			top: 10px
+			top: 16px
 			width: 40px
 			+transform(rotate(-45deg))
 .copyrights
 	float: left
-	padding-top: 33px
-	padding-top: 24px 
-	+h-r
-	font-size: 11px
-	color: #9f9f9f
-	text-transform: uppercase
-	+ls							
+	padding-top: 24px
+	p 
+		+h-r
+		font-size: 11px
+		color: #9f9f9f
+		letter-spacing: 2px
+		text-transform: uppercase
+		+ls							
 .design
 	float: right
 	padding-top: 18px
@@ -458,6 +461,7 @@ p
 		+h-r
 		font-size: 11px
 		color: #9f9f9f
+		letter-spacing: 2px
 		text-decoration: none
 		text-transform: uppercase
 		+ls
@@ -576,7 +580,8 @@ p
 			cursor: pointer
 			+ls
 			+h-l
-			color: rgba(#006595, .5)
+			letter-spacing: 2px
+			color: #006595
 			+transition(color 200ms, box-shadow 200ms)
 			&:hover, &.is-active
 				color: #83ac00
@@ -589,7 +594,6 @@ p
 				right: -10px 
 				left: -10px  
 				cursor: pointer
-		
 
 // form
 .form
