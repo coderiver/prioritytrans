@@ -17,14 +17,16 @@
 	&__in 
 		padding: 80px 0 60px  
 		background: rgba(#fff, 0.9)
-	&__title	
+	&__title
+		display: inline-block	
 		margin-bottom: 25px
 		font-size: 12px
 		text-transform: uppercase
-		color: rgba(#006596, .9)
+		text-decoration: none
+		color: #006596
 		letter-spacing: 2px
-		&.is-active
-			color: #8fb40a
+		&:hover, &.is-active
+			color: #8eb30a
 	&__list
 		li
 			margin-bottom: 13px
@@ -36,10 +38,8 @@
 				text-decoration: none
 				color: rgba(#006596, .5)
 				+tr(color 200ms)
-				&:hover
-					color: rgba(#006596, 1) 
-				&.is-active
-					color: #8fb40a	
+				&:hover, &.is-active
+					color: #8eb30a	
 .contacts
 	&__info
 		margin-bottom: 25px 
@@ -49,7 +49,7 @@
 			font-size: 11px
 			text-transform: uppercase
 			+ls
-			color: rgba(#404040, .5)
+			color: #404040
 			+h-l
 			font-size: 11px
 			text-decoration: none
@@ -338,7 +338,7 @@
 		position: relative
 		margin-bottom: 35px
 		font-size: 14px
-		color: rgba(#116f9d, 0.5)
+		color: #116f9d
 		+tr(color 200ms)
 	&__title
 		position: relative
@@ -502,7 +502,7 @@
 						color: #9ebd2b
 	&__date
 		margin-bottom: 15px
-		color: rgba(#000, .5)
+		color: #000
 		font-size: 10px
 		text-transform: uppercase
 		+h-l
@@ -589,7 +589,7 @@
 			line-height: 2.4
 			+ls 
 			+h-l
-			color: rgba(#fff, .5)
+			color: #fff
 			text-transform: uppercase
 .return
 	+s(return)

@@ -139,7 +139,7 @@ p
 	+h-l
 	font-size: 10px
 	text-transform: uppercase
-	color: rgba(#000, 0.5)
+	color: #000
 	+ls 
 .button
 	height: 58px
@@ -548,8 +548,8 @@ p
 			margin-bottom: 40px
 			text-decoration: none
 			+tr(color 200ms)
-			&:hover
-				color: rgba(#006596, 0.7)
+			&:hover, &.current
+				color: #8eb30a
 	&__list
 		font-size: 11px
 		text-transform: uppercase
@@ -559,11 +559,9 @@ p
 			text-decoration: none
 			+h-l
 			+ls
-			color: rgba(#006596, .5)
+			color: #006596
 			+tr(color 200ms)
-			&:hover
-				color: rgba(#006596, 1)	
-			&.current
+			&:hover, &.current
 				color: #8eb30a
 .inner-nav
 	li
@@ -611,16 +609,16 @@ p
 	text-transform: uppercase
 	+placeholder
 		text-transform: uppercase
-		color: rgba(#fff, 0.5)
+		color: #fff
 	&.error
 		border-color: #ff6767
-		color: rgba(#ff6767, 0.5)
+		color: #ff6767
 		+placeholder
 			color: #ff6767
 	.contacts &
 		color: #000
 		+placeholder
-			color: rgba(#000, 0.5)								  		
+			color: #000							  		
 .textarea
 	height: 70px
 	padding: 5px 12px 
@@ -686,7 +684,7 @@ p
 		position: relative
 		margin-bottom: 35px
 		font-size: 14px
-		color: rgba(#116f9d, 0.5)
+		color: #116f9d
 		+tr(color 200ms)	
 	&__title
 		position: relative
@@ -707,7 +705,7 @@ p
 .block[href]
 	text-decoration: none
 	.block__number
-		color: rgba(#116f9d, 0.5)
+		color: #116f9d
 	.block__title
 		color: #116f9d
 	&:hover
