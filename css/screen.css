@@ -130,7 +130,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .logo a:before { content: ""; position: absolute; top: 20px; left: 0; background: url('../img/icons-s6cd2ac9411.png') 0 -474px no-repeat; width: 164px; height: 45px; }
 
 .phone { float: right; padding-top: 34px; }
-.phone a { font-size: 12px; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; letter-spacing: 2px; color: #9f9f9f; text-decoration: none; letter-spacing: 0.49px; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
+.phone a { font-size: 12px; font-family: "HelveticaNeueCyrRoman", Arial, sans-serif; letter-spacing: 2px; color: #9f9f9f; text-decoration: none; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 .phone a:hover { color: #000; }
 
 .menu-left { position: relative; display: inline-block; vertical-align: middle; padding-top: 20px; }
