@@ -347,7 +347,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .topper__about { margin-bottom: 10%; }
 @media only screen and (max-height: 860px) { .topper__about { margin-bottom: 3%; } }
 .topper__about .col { font-size: 0; }
-.topper__about .col2 p { margin-bottom: 20px; }
+.topper__about .col2 p { margin-bottom: 20px; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .topper__services { margin-bottom: 5%; }
 @media only screen and (max-height: 768px) { .topper__services { margin-bottom: 0; } }
 .topper__services a { position: relative; display: inline-block; font-size: 12px; font-family: "HelveticaNeueCyrBold", Arial, sans-serif; color: #01729d; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; padding: 0 15px 15px; margin: -15px; }
@@ -430,7 +430,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .m-company__number { position: relative; margin-bottom: 35px; font-size: 14px; color: #116f9d; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; }
 .m-company__title { position: relative; margin-bottom: 20px; font-family: "MyriadProSemibold", Arial, sans-serif; font-size: 18px; color: #116f9d; -moz-transition: color 200ms; -o-transition: color 200ms; -webkit-transition: color 200ms; transition: color 200ms; padding-bottom: 20px; }
 .m-company__title:before { content: ""; position: absolute; bottom: 0; left: 0; height: 2px; width: 30px; background: #9ebd2b; }
-.m-company__more { padding-left: 30px; height: 222px; text-align: center; font-size: 0; }
+.m-company__more { padding: 49px 0 49px 30px; max-height: 222px; text-align: center; font-size: 0; }
 .m-company__more:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .m-company__more a { display: inline-block; vertical-align: middle; padding: 20px 0 20px 20px; font-size: 28px; font-family: "FarreronsSerifItalic", Arial, sans-serif; line-height: 1; font-style: normal; color: #006596; text-align: left; }
 .m-company__more a:hover { text-decoration: none; }
