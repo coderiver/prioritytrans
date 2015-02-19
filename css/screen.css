@@ -353,7 +353,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .topper__services a { position: relative; display: inline-block; font-size: 12px; font-family: "HelveticaNeueCyrBold", Arial, sans-serif; color: #01729d; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; padding: 0 15px 15px; margin: -15px; }
 .topper__services a:before { content: ""; position: absolute; top: 22px; left: 15px; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
 .topper__services a:after { content: ""; position: absolute; top: 22px; left: 15px; opacity: 0; -moz-transition: opacity 200ms; -o-transition: opacity 200ms; -webkit-transition: opacity 200ms; transition: opacity 200ms; }
-.topper__services a span { line-height: 2; padding-bottom: 4px; box-shadow: 0 1px 0 #bfdae4; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
+.topper__services a span { line-height: 2; padding-bottom: 4px; box-shadow: 0 1px 0 #bfdae4; -moz-transition: box-shadow 200ms; -o-transition: box-shadow 200ms; -webkit-transition: box-shadow 200ms; transition: box-shadow 200ms; }
 .topper__services a.freight { padding-top: 90px; }
 .topper__services a.freight:before { background: url('../img/icons-s6cd2ac9411.png') 0 -395px no-repeat; width: 86px; height: 33px; }
 .topper__services a.freight:after { background: url('../img/icons-s6cd2ac9411.png') 0 -352px no-repeat; width: 86px; height: 33px; }
@@ -828,8 +828,9 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 @media only screen and (max-width: 1112px) { .articles .filters { margin-left: 215px; } }
 
 .post { position: relative; z-index: 2; margin-bottom: 15px; }
+.post .h3 { margin: -60px 0 30px; }
 .post__content { position: relative; top: -60px; margin-bottom: -60px; }
-.post__content .h3 { position: relative; left: -25%; margin-bottom: 10px; width: 125%; }
+.post__content .h3 { position: relative; left: -25%; margin: 0 0 10px 0; width: 125%; }
 .post__article { padding-top: 30px; *zoom: 1; }
 .post__article:after { content: " "; display: table; clear: both; }
 .post__article img { position: relative; left: -40px; float: left; width: 50%; margin-bottom: 60px; }
