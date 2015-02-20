@@ -690,7 +690,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 
 .container_freight { background: url(../img/img15.jpg); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-attachment: fixed; }
 
-.cooperation { position: relative; padding-top: 80px; margin-bottom: 120px; z-index: 2; }
+.cooperation { position: relative; padding-top: 80px; margin-bottom: 120px; clear: both; z-index: 2; }
 .cooperation .h3 { padding-left: 25%; margin-bottom: 50px; }
 .cooperation__item { position: relative; }
 .cooperation__number { position: absolute; top: -26px; left: -14px; font-size: 14px; color: #000; }
