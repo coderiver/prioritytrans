@@ -398,6 +398,23 @@ head.ready(function() {
     no_results_text: "Не найдено"
   });
 
+  // geography map point unchors
+
+  function unchors(){
+    var point = $('a.city');
+
+    point.on('click', function(){
+      var name = $(this).attr('href');
+
+      $('html, body').animate({
+        scrollTop: ($('.g-point[data-name='+name+']').offset().top - 85)
+      }, 300);
+
+      return false;
+    });
+
+  }
+  unchors();
 	// window scroll function
 
 	$(window).scroll(function(){
