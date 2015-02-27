@@ -727,6 +727,8 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 @media only screen and (max-width: 1112px) { .calculation__block { width: 200px; } }
 @media only screen and (max-width: 1024px) { .calculation__block { margin-left: 50px; } }
 .calculation__block:first-child { margin-left: 0; }
+.calculation__block.error .chosen-choices { border: 2px solid red; background: #febfbf; }
+.calculation__block.error .chosen-choices li.search-field input[type="text"] { background: #febfbf; }
 .calculation__close { position: absolute; top: 30px; right: -30px; background: url('../img/icons-s6cd2ac9411.png') 0 0 no-repeat; width: 19px; height: 19px; cursor: pointer; }
 .calculation__title { margin-bottom: 5px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #000; }
 .calculation__add { padding-left: 338px; padding-top: 10px; }

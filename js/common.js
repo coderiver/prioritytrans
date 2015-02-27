@@ -228,40 +228,29 @@ head.ready(function() {
         $('.js-calc-throw').hide();
         $('.js-calc-add').show();
       });
-
-  		// input change events
-  			var item = $('.js-calc-block');
-  			
-        item.find('.js-calc-input').on('input', function(event){
-  				$(this).parent().find('.js-calc-reset').addClass('is-active');
-  				if ($(this).val().length == 0) {
-  					$(this).parent().find('.js-calc-reset').removeClass('is-active');
-  				};
-          event.stopPropagation();
-  			});
-        
-        item.find('.js-calc-input').on('click', function(event){
-          $('.js-calc-list').removeClass('is-open');
-          $(this).parent().find('.js-calc-list').addClass('is-open');
-          event.stopPropagation();
-        });
-
-  			$('.js-calc-reset').on('click', function(){
-  				$(this).prev().val('');
-  				$(this).removeClass('is-active');
-  			});
       
   		// result button
   		$('.js-calc-sbmt').on('click', function(){
-  			$('.js-calc-insert').addClass('is-hidden');
-  			$('.js-calc-result').addClass('is-open');
+
+          if (!$('.js-start-city').find('li.search-choice').length) {
+            $('.js-start-city').addClass('error');
+          }
+          if (!$('.js-finish-city').find('li.search-choice').length) {
+            $('.js-finish-city').addClass('error');
+          }
+
+        if ( !($('.js-start-city').hasClass('error') || $('.js-finish-city').hasClass('error')) ) {
+          $('.js-calc-insert').addClass('is-hidden');
+          $('.js-calc-result').addClass('is-open');
+        }
+  			
   		}); 	
   		// refresh
   		$('.js-calc-restart').on('click', function(){
   			$('.js-calc-result').removeClass('is-open');
   			$('.js-calc-insert').removeClass('is-hidden');
-  			$('.js-calc-input').val('');
-  			$('.js-calc-reset').removeClass('is-active');
+        $('.search-choice-close').trigger('click');
+        $('.js-calc-block').removeClass('error');
   			$('.js-calc-list').removeClass('is-open');
         $('.js-calc-throw').hide();
         $('.js-calc-add').show();
@@ -396,6 +385,9 @@ head.ready(function() {
     width: '100%',
     max_selected_options: 1,
     no_results_text: "Не найдено"
+  });
+  $('.chosen-select').chosen().change(function(){
+    $(this).parents('.js-calc-block').removeClass('error');
   });
 
   // geography map point unchors
