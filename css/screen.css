@@ -44,7 +44,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .container { position: relative; padding-top: 84px; z-index: 1; }
 .container.animate { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
 
-.center { position: relative; max-width: 980px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; }
+.center { position: relative; max-width: 980px; margin: 0 auto; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; z-index: 2; }
 .center .center__wrap { position: relative; z-index: 5; }
 .center:before { content: ""; position: absolute; top: 0; bottom: 0; left: 25%; width: 25%; border: 1px solid rgba(255, 255, 255, 0.5); border-width: 0 1px; }
 .center:after { content: ""; position: absolute; top: 0; bottom: 0; right: 25%; width: 1px; background: rgba(255, 255, 255, 0.5); }
@@ -311,10 +311,6 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.container_index { background: url(../img/europe.jpg) 100% 560px no-repeat; }
-@media only screen and (max-height: 900px) { .container_index { background-position: 100% 460px; } }
-@media only screen and (max-width: 1024px) { .container_index { background-position: 130px 300px; } }
-
 .footer { position: relative; padding: 0 66px 66px; z-index: 2; }
 .footer__in { padding: 80px 0 60px; background: rgba(255, 255, 255, 0.9); }
 .footer__title { display: inline-block; margin-bottom: 25px; font-size: 12px; text-transform: uppercase; text-decoration: none; color: #006596; letter-spacing: 2px; }
@@ -330,7 +326,7 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 
 .center > * { position: relative; z-index: 1; }
 
-.topper { margin-top: 7%; padding-bottom: 200px; }
+.topper { position: relative; margin-top: 7%; padding-bottom: 200px; z-index: 2; }
 .topper .col.animate_5 { -moz-transform: translate(-100px, 100px); -ms-transform: translate(-100px, 100px); -webkit-transform: translate(-100px, 100px); transform: translate(-100px, 100px); }
 .topper .col.animate_5.is-animated { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
 .topper .col.animate_8 { -moz-transform: translate(100px, 100px); -ms-transform: translate(100px, 100px); -webkit-transform: translate(100px, 100px); transform: translate(100px, 100px); }
@@ -373,13 +369,13 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .topper__down { text-align: center; }
 @media only screen and (max-width: 1366px) { .topper__down { display: none; } }
 
-.cloud1 { position: absolute; right: 0; top: 0; margin-right: 350px; z-index: 2; pointer-events: none; }
+.cloud1 { position: absolute; right: 0; top: -100px; margin-right: 350px; z-index: 2; pointer-events: none; }
 @media only screen and (max-width: 1440px) { .cloud1 { margin-right: 250px; } }
 @media only screen and (max-width: 1200px) { .cloud1 { margin-right: 200px; } }
 @media only screen and (max-width: 1024px) { .cloud1 { margin-right: 100px; } }
 .cloud1.alt { top: -600px; }
 
-.cloud2 { position: absolute; left: 0; bottom: -50px; margin-left: 400px; pointer-events: none; z-index: 2; }
+.cloud2 { position: absolute; left: 0; bottom: -400px; margin-left: 400px; pointer-events: none; z-index: 2; }
 @media only screen and (max-width: 1440px) { .cloud2 { margin-left: 300px; } }
 @media only screen and (max-width: 1200px) { .cloud2 { margin-left: 200px; } }
 @media only screen and (max-width: 1024px) { .cloud2 { margin-left: 100px; } }
@@ -387,12 +383,19 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 
 .cloud3 { position: absolute; right: 0; top: -1445px; pointer-events: none; z-index: 2; }
 
-.m-geography { position: relative; overflow: hidden; }
+.m-geography { position: absolute; top: 529px; left: 0; right: 0; z-index: 2; }
 .m-geography.animate { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
+.m-geography__line1, .m-geography__line2, .m-geography__line3, .m-geography__line4, .m-geography__line5 { position: absolute; top: 0; left: 50%; height: 671px; width: 1px; background: rgba(255, 255, 255, 0.5); }
+.m-geography__line1 { -moz-transform: translateX(-490px); -ms-transform: translateX(-490px); -webkit-transform: translateX(-490px); transform: translateX(-490px); }
+.m-geography__line2 { -moz-transform: translateX(-245px); -ms-transform: translateX(-245px); -webkit-transform: translateX(-245px); transform: translateX(-245px); }
+.m-geography__line4 { -moz-transform: translateX(245px); -ms-transform: translateX(245px); -webkit-transform: translateX(245px); transform: translateX(245px); }
+.m-geography__line5 { -moz-transform: translateX(490px); -ms-transform: translateX(490px); -webkit-transform: translateX(490px); transform: translateX(490px); }
 .m-geography__text { width: 380px; }
 .m-geography__text p { margin-bottom: 10px; }
-.m-geography__next { padding: 94px 0 236px; text-align: right; }
-.m-geography__next .btn { width: 25%; padding: 0; text-align: center; }
+.m-geography__next { position: absolute; top: 400px; left: 50%; width: 244px; margin-left: 246px; }
+.m-geography__next .btn { width: 100%; padding: 0; text-align: center; }
+
+.geoblock { position: absolute; top: 0; left: 50%; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); transform: translateX(-50%); margin-left: -300px; }
 
 .m-company { margin-bottom: 80px; }
 @media only screen and (max-width: 1024px) { .m-company .col { width: 33.3%; }
@@ -607,8 +610,10 @@ p { letter-spacing: 0.49px; line-height: 24px; }
 .geography__content .col_padding { padding-top: 222px; }
 
 .inner-map { overflow: hidden; position: relative; top: -529px; padding-top: 329px; margin-bottom: -929px; z-index: 1; }
+.container_index .inner-map { padding-top: 0; margin-bottom: -729px; }
 .inner-map.is-fixed { position: fixed; top: -625px; }
 .inner-map__draggable { position: relative; height: 1400px; cursor: move; }
+.container_index .inner-map__draggable { cursor: default; margin-left: 35%; }
 .inner-map__img { position: relative; width: 2000px; }
 .inner-map__img img { width: 100%; }
 .inner-map__route { position: absolute; top: 610px; left: 240px; }

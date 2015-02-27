@@ -1,12 +1,4 @@
-// Normally mainpage styles
-
-// container index
-.container_index
-	background: url(../img/europe.jpg) 100% 560px no-repeat
-	+rh(900)
-		background-position: 100% 460px
-	+r(1024) 
-		background-position: 130px 300px	
+// Normally mainpage styles	
 
 // footer
 .footer
@@ -61,8 +53,10 @@
 	z-index: 1			
 // topper			
 .topper
+	position: relative
 	margin-top: 7%
 	padding-bottom: 200px
+	z-index: 2
 	.col
 		&.animate_5
 			+translate(-100px,100px)
@@ -174,7 +168,7 @@
 .cloud1
 	position: absolute
 	right: 0
-	top: 0
+	top: -100px
 	margin-right: 350px
 	z-index: 2
 	pointer-events: none
@@ -189,7 +183,7 @@
 .cloud2
 	position: absolute
 	left: 0
-	bottom: -50px
+	bottom: -400px
 	margin-left: 400px
 	pointer-events: none
 	z-index: 2
@@ -211,21 +205,48 @@
 
 // m-geography
 .m-geography
-	position: relative
-	overflow: hidden
+	position: absolute
+	top: 529px
+	left: 0
+	right: 0
+	z-index: 2
 	&.animate
-		+translate(0,0)			 	
+		+translate(0,0)
+	&__line1, &__line2, &__line3, &__line4, &__line5
+		position: absolute
+		top: 0
+		left: 50%
+		height: 671px
+		width: 1px
+		background: rgba(255, 255, 255, 0.5)
+	&__line1
+		+transform(translateX(-490px))
+	&__line2
+		+transform(translateX(-245px))
+	&__line4
+		+transform(translateX(245px))
+	&__line5
+		+transform(translateX(490px))
 	&__text
 		width: 380px
 		p
 			margin-bottom: 10px
 	&__next
-		padding: 94px 0 236px
-		text-align: right
+		position: absolute
+		top: 400px
+		left: 50%
+		width: 244px
+		margin-left: 246px 
 		.btn
-			width: 25%
+			width: 100%
 			padding: 0
 			text-align: center
+.geoblock
+	position: absolute
+	top: 0
+	left: 50%
+	+transform(translateX(-50%))
+	margin-left: -300px  		
 
 // m-company
 .m-company
