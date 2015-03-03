@@ -1,5 +1,35 @@
 head.ready(function() {
 
+	function ajaxpostshow(urlres, datares, wherecontent){
+	       $.ajax({
+	           type: "POST",
+	           url: urlres,
+	           data: datares,
+	           dataType: "html",
+	      });
+	}
+
+	function ajaxpostshow1(urlres, datares, wherecontent){
+	       $.ajax({
+	           type: "POST",
+	           url: urlres,
+	           data: datares,
+	           dataType: "html",
+	           success: function(fillter){
+	                $(wherecontent).html(fillter);
+	           }
+	      });
+	}
+
+	function ajaxSubmit(form){
+		var formsubscrube = $(form).serialize(),
+			target_block = $(form).data('block'),
+			target_php = $(form).data('php');
+		formsubscrube = formsubscrube + '&action=ajax';
+		ajaxpostshow(target_php, formsubscrube, target_block);
+		return false;
+	}
+
   $(document).click(function(){
     $('.js-calc-list').removeClass('is-open');
   });
@@ -26,7 +56,7 @@ head.ready(function() {
 		arrows: false,
 		slidesToShow: 1
 	});
-  
+
   $('.js-slick-news').slick({
     infinite: true,
     speed: 600,
@@ -47,7 +77,7 @@ head.ready(function() {
 	});
 
 	var total = $('.driver').length;
-	
+
 	$('.js-drivers').slick({
 		infinite: true,
     fade: true,
@@ -107,14 +137,15 @@ head.ready(function() {
 				form : form_this,
 				validateOnBlur : false,
 				borderColorOnError : false,
-        scrollToTopOnError : false,
+        			scrollToTopOnError : false,
 				onSuccess : function() {
-      				$('.js-step1').addClass('is-hidden');
-      				$('.js-step2').removeClass('is-hidden');
-      				$('.js-form').addClass('is-success');
-      				$('.js-form-back').addClass('is-success');
+	      				$('.js-step1').addClass('is-hidden');
+	      				$('.js-step2').removeClass('is-hidden');
+	      				$('.js-form').addClass('is-success');
+	      				$('.js-form-back').addClass('is-success');
+					ajaxSubmit(form_this);
       				return false;
-    			} 
+    			}
 			});
 		});
 	};
@@ -132,7 +163,7 @@ head.ready(function() {
 			popup.find('.js-validate').trigger('reset');
 			popup.find('.js-step1').removeClass('is-hidden');
       		popup.find('.js-step2').addClass('is-hidden');
-		});	
+		});
 	};
 
 	if ($('.js-popup-form').length) {
@@ -153,13 +184,13 @@ head.ready(function() {
 	});
 
 	// clouds parallax effect
-	
+
 	function cloudsParallax(){
 
 		$('.js-cloud').each(function(){
 			var cloud = $(this),
 				yPos = -($(window).scrollTop() / cloud.data('speed'));
-				
+
 			if (cloud.data('dir') == 'left') {
 				cloud.css('left', yPos);
 			}
@@ -168,11 +199,11 @@ head.ready(function() {
 			}
 
 		});
-		
+
 
 	};
 	cloudsParallax();
-	
+
 	// transport bg animation
 
 	$(window).scroll(function(){
@@ -183,28 +214,28 @@ head.ready(function() {
 	});
 
 	// map
-	
+
   if ($('.map').length) {
     ymaps.ready(function () {
       var myMap = new ymaps.Map('YMapsID', {
-          center: [53.938615, 27.600765],
+          center: [53.925758,27.507495],
           zoom: 14,
           controls: []
       });
       myMap.behaviors.disable('scrollZoom');
      // Создаем метку с помощью вспомогательного класса.
-        myPlacemark1 = new ymaps.Placemark([53.938615, 27.600765], {
+        myPlacemark1 = new ymaps.Placemark([53.925758,27.507495], {
             // Свойства.
-            
-            balloonContent: 'Luxplast',
-            hintContent: 'Г. МИНСК, УЛ. МЕЛЕЖА 22 А'
+
+            balloonContent: 'Приорити Транс',
+            hintContent: 'ул.Тимирязева, д.67'
         }, {
             // Опции.
             // Стандартная фиолетовая иконка.
             iconLayout: 'default#image',
             iconImageSize: [36, 48],
-            iconImageHref: 'img/marker.png'
-           
+            iconImageHref: '/bitrix/templates/priority/img/marker.png'
+
         });
 
      myMap.geoObjects.add(myPlacemark1)
@@ -217,44 +248,81 @@ head.ready(function() {
 
   	function calculation(){
 
-  		// add one more input
-  		$('.js-calc-add').on('click', function(){
-  			$('.js-calc-throw').show();
-  			$(this).hide();
-  			return false;
-  		});
-      // remove one more input
-      $('.js-calc-remove').on('click', function(){
-        $('.js-calc-throw').hide();
-        $('.js-calc-add').show();
-      });
-      
-  		// result button
-  		$('.js-calc-sbmt').on('click', function(){
+	// add one more input
+        $('.js-calc-add').on('click', function(){
+        	$('.js-calc-throw').show();
+        	$(this).hide();
+        	return false;
+        });
+        // remove one more input
+        $('.js-calc-remove').on('click', function(){
+          $('.js-calc-throw').hide();
+          $('.js-calc-add').show();
+        });
 
-          if (!$('.js-start-city').find('li.search-choice').length) {
-            $('.js-start-city').addClass('error');
-          }
-          if (!$('.js-finish-city').find('li.search-choice').length) {
-            $('.js-finish-city').addClass('error');
-          }
+        // input change events
+        var item = $('.js-calc-block');
 
-        if ( !($('.js-start-city').hasClass('error') || $('.js-finish-city').hasClass('error')) ) {
-          $('.js-calc-insert').addClass('is-hidden');
-          $('.js-calc-result').addClass('is-open');
-        }
-  			
-  		}); 	
-  		// refresh
-  		$('.js-calc-restart').on('click', function(){
-  			$('.js-calc-result').removeClass('is-open');
-  			$('.js-calc-insert').removeClass('is-hidden');
-        $('.search-choice-close').trigger('click');
-        $('.js-calc-block').removeClass('error');
-  			$('.js-calc-list').removeClass('is-open');
-        $('.js-calc-throw').hide();
-        $('.js-calc-add').show();
-  		});
+        item.find('.js-calc-input').on('input', function(event){
+        	$(this).parent().find('.js-calc-reset').addClass('is-active');
+        	if ($(this).val().length == 0) {
+        		$(this).parent().find('.js-calc-reset').removeClass('is-active');
+        	};
+          event.stopPropagation();
+        });
+        
+/*        item.find('.js-calc-input').on('click', function(event){
+          $('.js-calc-list').removeClass('is-open');
+          $(this).parent().find('.js-calc-list').addClass('is-open');
+          event.stopPropagation();
+        });
+*/
+
+          // calculator validation
+
+          var calc_validate = $('.js-validate-calc');
+          if (calc_validate.length) {
+              $.validate({
+                form : calc_validate,
+                validateOnBlur : false,
+                borderColorOnError : false,
+                      scrollToTopOnError : false,
+                onSuccess : function() {
+                        $('.js-calc-insert').addClass('is-hidden');
+                        $('.js-calc-result').addClass('is-open');
+                  ajaxSubmit(calc_validate);
+                      return false;
+                  }
+              });
+          };
+
+        $('.point').on('click', function(){
+          var text = $(this).text();
+          $(this).parents('.calculation__input').find('.js-calc-input').val(text);
+          return false;
+        });
+
+        $('.js-calc-reset').on('click', function(){
+        	$(this).prev().val('');
+        	$(this).removeClass('is-active');
+        });
+
+        // result button
+        $('.js-calc-sbmt').on('click', function(){
+        	$('.js-calc-insert').addClass('is-hidden');
+        	$('.js-calc-result').addClass('is-open');
+        });
+        // refresh
+        $('.js-calc-restart').on('click', function(){
+        	$('.js-calc-result').removeClass('is-open');
+        	$('.js-calc-insert').removeClass('is-hidden');
+        	$('.js-calc-input').val('').removeClass('error');
+          $('.calculation__input').removeClass('has-error');
+        	$('.js-calc-reset').removeClass('is-active');
+        	$('.js-calc-list').removeClass('is-open');
+          $('.js-calc-throw').hide();
+          $('.js-calc-add').show();
+        });
 
   	}
   	if ($('.js-calc').length) {
@@ -263,7 +331,7 @@ head.ready(function() {
 
   	// inner -map
   	$(".js-draggable").draggable();
-  	
+
   	function innerMapFixed(){
   		var height = $(window).outerHeight();
       $('.center__lines .line').css('height', height);
@@ -277,12 +345,12 @@ head.ready(function() {
   			$('.js-inner-map').removeClass('is-fixed');
   			$('.js-geography-cont').css('margin-top', 0);
   		}
-  		
+
   	}
   	innerMapFixed();
 
   	// scroll down btn
-  		
+
   	$('.js-scroll-down').on('click', function(){
   		$('html, body').animate({
        		scrollTop: ($('.m-geography').offset().top - 200)
@@ -292,14 +360,14 @@ head.ready(function() {
 
   	// animation appearing
 
-  	function appeareAnimation(){ 
+  	function appeareAnimation(){
   		$('.animate').each(function(){
   			var item_coor = $(this).offset().top,
   				start_Y = ($(document).scrollTop() + $(window).height());
   			if (start_Y >= item_coor) {
   				$(this).addClass('is-animated');
   			};
-  		
+
   		});
   	}
   	appeareAnimation();
@@ -318,7 +386,7 @@ head.ready(function() {
           text = text.substring(0, last);
           $('.js-hdt-btn').show();
           return text + "...";
-          
+
     }
 
     var text = $('.js-hdt').text();
@@ -340,17 +408,17 @@ head.ready(function() {
     });
 
 // bookblock
-      
+
       function bookblock() {
         $('.bb-bookblock').each( function( i ) {
-          
+
           var $bookBlock = $('.bb-bookblock'),
             $nav = $('.m-news .slick-dots li button'),
             bb = $bookBlock.bookblock( {
               speed : 600,
               shadows : false
             });
-            
+
           // add navigation events
           $nav.each( function( i ) {
             $( this ).on( 'click touchstart', function(event) {
@@ -361,7 +429,7 @@ head.ready(function() {
               //return false;
             });
           });
-          
+
           // add swipe events
           $bookBlock.children().on( {
             'swipeleft' : function( event ) {
@@ -373,7 +441,7 @@ head.ready(function() {
               return false;
             }
           });
-          
+
         });
       };
 
@@ -384,11 +452,29 @@ head.ready(function() {
   $('.chosen-select').chosen({
     width: '100%',
     max_selected_options: 1,
-    no_results_text: "Не найдено"
+    no_results_text: " "
   });
   $('.chosen-select').chosen().change(function(){
-    $(this).parents('.js-calc-block').removeClass('error');
+	$(this).parents('.js-calc-block').removeClass('error');
   });
+
+var timeout;
+$('.js-calc-input').on('input', function(){
+	var text = $(this).val(),
+	offset = text.length,
+	formsubscrube = text,
+	target_block = $(this).parents('.calculation__input').find('.js-calc-list'),	
+	container = $(this).parents('.calculation__input').find('.js-calc-list').attr('id')
+	target_php = '/services/services_calc.php';
+	if(offset>=3){
+		clearTimeout(timeout);
+			timeout = setTimeout(function() {
+				formsubscrube = 'id='+ container +'&TEXT=' + formsubscrube + '&action=ajax';
+				ajaxpostshow1(target_php, formsubscrube, target_block);
+			   	return false;
+			}, 1000);
+	}
+});
 
   // geography map point unchors
 
