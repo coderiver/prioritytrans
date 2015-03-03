@@ -62,10 +62,14 @@
 			+translate(-100px,100px)
 			&.is-animated
 				+translate(0,0)
+			+r(1024)
+				+translate(0,0)	
 		&.animate_8
 			+translate(100px,100px)
 			&.is-animated
-				+translate(0,0)		
+				+translate(0,0)
+			+r(1024)
+				+translate(0,0)			
 	.center__wrap
 		background: url(../img/img1.jpg) 100% 0 no-repeat
 		+rh(860)
@@ -236,7 +240,9 @@
 		top: 400px
 		left: 50%
 		width: 244px
-		margin-left: 246px 
+		margin-left: 246px
+		+r(1024)
+			margin-left: 180px 
 		.btn
 			width: 100%
 			padding: 0
@@ -246,7 +252,11 @@
 	top: 0
 	left: 50%
 	+transform(translateX(-50%))
-	margin-left: -300px  		
+	margin-left: -300px
+	+r(1024)
+		left: 0
+		+transform(translateX(0))
+		margin-left: 140px  		
 
 // m-company
 .m-company
@@ -297,7 +307,9 @@
 			+tr(all 400ms) 
 			+translate(-50px,150px)
 			&.is-animated
-				+translate(0,0)	 
+				+translate(0,0)
+			+r(1024)
+				+translate(0,0)		 
 		&.is-animated
 			&:before
 				border-color: #f00	
@@ -354,11 +366,15 @@
 				+translate(50px,30px)
 				&.is-animated
 					+translate(0,0)
+				+r(1024)
+					+translate(0,0)	
 		&.last
 			&.animate
 				+translate(-50px,30px)
 				&.is-animated
-					+translate(0,0)					 
+					+translate(0,0)
+				+r(1024)
+					+translate(0,0)						 
 		& > p
 			position: relative
 			line-height: 1.6 
@@ -403,7 +419,9 @@
 		&.animate
 			+translate(100px,0)
 			&.is-animated
-				+translate(0,0)		
+				+translate(0,0)
+			+r(1024)
+				+translate(0,0)			
 
 .m-media
 	position: relative
@@ -424,11 +442,15 @@
 			+translate(0,-100px)
 			&.is-animated
 				+translate(0,0)
+			+r(1024)
+				+translate(0,0)	
 	&__text
 		&.animate
 			+translate(100px,0)
 			&.is-animated
-				+translate(0,0)			
+				+translate(0,0)
+			+r(1024)
+				+translate(0,0)				
 	&__date-img
 		position: absolute
 		top: 0
@@ -558,6 +580,8 @@
 		+translate(-100px,0)
 		&.is-animated
 			+translate(0,0)
+		+r(1024)
+			+translate(0,0)	
 	&__in
 		position: relative
 		min-height: 58px

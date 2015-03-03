@@ -287,7 +287,9 @@ p
 		height: 2px
 		background: #187ea6
 	&.animate
-		+translate(-100px,0)	
+		+translate(-100px,0)
+		+r(1024)
+			+translate(0,0)	
 	&.is-animated
 		&:after
 			width: 135px 	
@@ -764,6 +766,13 @@ p
 		+translate(0,0)
 	&.animate_fixed
 		+translate(0,0)
+	+r(1024)
+		opacity: 1 
+		+translate(0,0)
+		&.to-left
+			+translate(0,0)
+		&.to-right
+			+translate(0,0)	
 @for $i from 1 through 20
 	.animate_#{$i}
 		transition-delay: 300ms*$i!important
