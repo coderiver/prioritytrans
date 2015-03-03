@@ -387,7 +387,7 @@ p { line-height: 24px; }
 @media only screen and (max-width: 1024px) { .cloud2 { margin-left: 100px; } }
 .cloud2.alt { top: -800px; bottom: auto; }
 
-.cloud3 { position: absolute; right: 0; top: -1445px; pointer-events: none; z-index: 2; }
+.cloud3 { position: absolute; right: 0; top: -1370px; pointer-events: none; z-index: 2; }
 
 .m-geography { position: absolute; top: 529px; left: 0; right: 0; z-index: 2; }
 .m-geography.animate { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
