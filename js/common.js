@@ -119,12 +119,20 @@ head.ready(function() {
 	$('.js-gallery-nav').slick({
 		  slidesToShow: 4,
     	slidesToScroll: 1,
+      infinite: false,
     	asNavFor: '.js-gallery-for',
     	focusOnSelect: true,
       onInit: function(){
         $('.js-gallery-nav').find('.slick-slide[index="0"]').addClass('current');
       }
 	});
+
+  $('.js-gallery-nav .slick-slide').on('click', function(){
+      var index = $(this).attr('index');
+      $('.js-gallery-nav').find('.slick-slide').removeClass('current');
+      $(this).addClass('current');
+      $('.js-gallery-for').slickGoTo(index);
+  })
 
 
 	// validation
