@@ -41,6 +41,9 @@ body { min-width: 1024px; font-family: "MyriadProRegular", Arial, sans-serif; fo
 
 p { line-height: 24px; }
 
+@-ms-viewport { width: 1024px; }
+@-o-viewport { width: 1024px; }
+@viewport { width: 1024px; }
 .container { position: relative; padding-top: 84px; z-index: 1; }
 .container.animate { -moz-transform: translate(0, 0); -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0); }
 
